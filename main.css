@@ -28,6 +28,17 @@ body {
 #header {
     margin-bottom: 20px;
 }
+.img-circle {
+    border-radius: 50%;
+    max-height: 20%;
+    max-width: 20%;
+    box-shadow: 0 0 5px 1px #AAA;
+    transition: all 0.2s ease-in-out;
+}
+.img-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 1px #AAA;
+}
 h1 {
     font-family: 'Cuprum', sans-serif;
     font-size: 54px;
@@ -35,7 +46,6 @@ h1 {
     transition: all 0.2s ease-in-out;
 }
 h1:hover{
-    font-size: 58px;
 /*    transform: scale(1.2);*/
     color: #8f9fba;
 }
@@ -107,15 +117,15 @@ h2 {
     box-shadow: 0 0 30px 1px #AAA;
 }
 #htmlcss {
-    background: #ffffff url("images/htmlcss-background2.png");
+    background: #ffffff url("images/html-back.png");
     background-size: cover;
 }
 #rprog {
-    background: #ffffff url("images/r-back2.png");
+    background: #ffffff url("images/r-back.png");
     background-size: cover;
 }
 #pyth {
-    background: #ffffff url("images/python-back2.png");
+    background: #ffffff url("images/python-back.png");
     background-size: cover;
 }
 

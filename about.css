@@ -5,7 +5,9 @@
     text-decoration: none;
 }
 
-
+html {
+    background-color: #f6f8f7;
+}
 body {
     width: inherit;
     padding: 5px;
