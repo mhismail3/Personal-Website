@@ -100,16 +100,16 @@ h2 {
     box-shadow: 0 0 30px 1px #AAA;
 }
 #htmlcss {
-    background: #ffffff url("images/htmlcss-background2.png");
+    background: #ffffff url("images/html-back.png");
     background-size: cover;
     
 }
 #rprog {
-    background: #ffffff url("images/r-back2.png");
+    background: #ffffff url("images/r-back.png");
     background-size: cover;
 }
 #pyth {
-    background: #ffffff url("images/python-back2.png");
+    background: #ffffff url("images/python-back.png");
     background-size: cover;
 }
 #content p {
