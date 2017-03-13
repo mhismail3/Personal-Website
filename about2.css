@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+html {
+    background-color: #f6f8f7;
+}
+body {
+    width: inherit;
+    padding: 5px;
+}
+#section1 {
+    width: 60%;
+    margin: 0 auto 0 auto;
+}
+
+#section2 {
+    clear: both;
+    width: 60%;
+    margin: auto;
+}
+.text {
+    font-family: 'Roboto Slab', serif;
+}
+#header {
+    height: 60px;
+    margin-bottom: 20px;
+}
+/*
+a {
+    color: inherit;
+}
+*/
+h1 {
+    display: inline;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 54px;
+    margin-bottom: 5px;
+    transition: all 0.2s ease-in-out;
+}
+h1:hover{
+    font-size: 58px;
+/*    transform: scale(1.2);*/
+    color: #8f9fba;
+}
+#content {
+    clear: both;
+}
+h2 {
+    font-family: 'Cuprum', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+#nav, #social, #nav li, #social li {
+    font-family: 'Cuprum', sans-serif;
+    font-size: 24px;
+    display: inline;
+    padding-right: 15px;
+}
+#nav {
+    height: inherit;
+    padding-left: 2px;
+    display: inline;
+    vertical-align: middle;
+    
+    text-align: center;
+}
+#nav li {
+    display: inline-block;
+}
+#social {
+    clear: left;
+    float: right;
+}
+.category {
+    float: left;
+    height: 300px;
+    width: 28%;
+    margin-right: 4%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /*text-align: center;*/
+    
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 36px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px #AAA;
+    
+    transition: all 0.2s ease-in-out;
+}
+.category:nth-child(1) {
+    margin-left: 4%;
+}
+.category:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px 1px #AAA;
+}
+#htmlcss {
+    background: #ffffff url("images/htmlcss-background2.png");
+    background-size: cover;
+    
+}
+#rprog {
+    background: #ffffff url("images/r-back2.png");
+    background-size: cover;
+}
+#pyth {
+    background: #ffffff url("images/python-back2.png");
+    background-size: cover;
+}
+#content p {
+    margin-bottom: 20px;
+}
+#featured {
+    margin-bottom: 20px;
+}
+footer {
+    margin-top: 30px;
+}
