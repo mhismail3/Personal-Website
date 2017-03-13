@@ -21,12 +21,12 @@ body {
 }
 .text {
     font-family: 'Roboto Slab', serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 
 #header {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .img-circle {
     border-radius: 50%;
@@ -83,7 +83,7 @@ h1:hover{
 h2 {
     font-family: 'Cuprum', sans-serif;
     font-size: 36px;
-    
+    padding-top: 20px;
 }
 
 
@@ -131,7 +131,7 @@ h2 {
 
 
 footer {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 }
