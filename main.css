@@ -26,7 +26,7 @@ body {
 
 
 #header {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 .img-circle {
     border-radius: 50%;
@@ -76,19 +76,19 @@ h1:hover{
     padding: 0;
 }
 #content p {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 
 h2 {
     font-family: 'Cuprum', sans-serif;
     font-size: 36px;
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 
 #featured {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 .category {
     float: left;

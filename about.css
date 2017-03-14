@@ -10,25 +10,22 @@ html {
 }
 body {
     padding: 5px;
-    
-}
-#section1 {
-    width: 60%;
-    margin: 0 auto 0 auto;
-}
-
-#section2 {
-    clear: both;
-    width: 60%;
-    margin: auto;
+    width: 95%;
+    margin: 100px auto;
 }
 .text {
     font-family: 'Roboto Slab', serif;
+    font-size: 24px;
 }
+
+
+
 #header {
-    height: auto;
-    margin-bottom: 20px;
     float: left;
+    margin-bottom: 20px;
+    width: 25%;
+    text-align: right;
+/*    position: fixed;*/
 }
 /*
 a {
@@ -37,8 +34,7 @@ a {
 */
 .img-circle {
     border-radius: 50%;
-    max-height: 20%;
-    max-width: 20%;
+    max-width: 60%;
     box-shadow: 0 0 5px 1px #AAA;
     transition: all 0.2s ease-in-out;
 }
@@ -50,6 +46,7 @@ h1 {
     
     font-family: 'Cuprum', sans-serif;
     font-size: 30px;
+    margin-top: 5px;
     margin-bottom: 5px;
     transition: all 0.2s ease-in-out;
 }
@@ -58,76 +55,32 @@ h1:hover{
 /*    transform: scale(1.2);*/
     color: #8f9fba;
 }
-#content {
-    clear: both;
+#nav {
+    margin-bottom: 5px;
 }
-h2 {
-    font-family: 'Cuprum', sans-serif;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-#nav, #social, #nav li, #social li {
+#nav li, #social li {
     font-family: 'Cuprum', sans-serif;
     font-size: 24px;
     display: block;
-    padding-right: 15px;
-}
-#nav {
-    display: block;
-}
-#social {
-    clear: left;
-/*    float: right;*/
 }
 #social li {
     display: inline;
-    
+    padding-left: 15px;
 }
-.category {
-    float: left;
-    height: 300px;
-    width: 28%;
-    margin-right: 4%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    /*text-align: center;*/
-    
-    font-family: 'Roboto Slab', sans-serif;
-    font-size: 36px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 1px #AAA;
-    
-    transition: all 0.2s ease-in-out;
+
+
+
+#content {
+    width: 65%;
+    margin-right: 50px;
+    float: right;
 }
-.category:nth-child(1) {
-    margin-left: 4%;
-}
-.category:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 30px 1px #AAA;
-}
-#htmlcss {
-    background: #ffffff url("images/html-back.png");
-    background-size: cover;
-    
-}
-#rprog {
-    background: #ffffff url("images/r-back.png");
-    background-size: cover;
-}
-#pyth {
-    background: #ffffff url("images/python-back.png");
-    background-size: cover;
+h2 {
+    margin-bottom: 30px;
 }
 #content p {
-    margin-bottom: 20px;
-}
-#featured {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 footer {
-    margin-top: 30px;
+    margin-top: 40px;
 }
