@@ -9,7 +9,6 @@ html {
     background-color: #f6f8f7;
 }
 body {
-    width: inherit;
     padding: 5px;
     
 }
@@ -29,6 +28,7 @@ body {
 #header {
     height: auto;
     margin-bottom: 20px;
+    float: left;
 }
 /*
 a {
@@ -69,20 +69,19 @@ h2 {
 #nav, #social, #nav li, #social li {
     font-family: 'Cuprum', sans-serif;
     font-size: 24px;
-    display: inline;
+    display: block;
     padding-right: 15px;
 }
 #nav {
-    padding-left: 2px;
-    display: inline-block;
-    text-align: center;
-}
-#nav li {
-    display: inline-block;
+    display: block;
 }
 #social {
     clear: left;
-    float: right;
+/*    float: right;*/
+}
+#social li {
+    display: inline;
+    
 }
 .category {
     float: left;
