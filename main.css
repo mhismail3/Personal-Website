@@ -93,10 +93,11 @@ h2 {
     margin-bottom: 60px;
 }
 .category {
-    float: left;
-    height: 300px;
-    width: 28%;
-    margin-right: 4%;
+/*    float: left;*/
+    
+    height: 100px;
+    width: 60%;
+    margin: 0 auto 30px;
     
     display: flex;
     align-items: center;
@@ -111,23 +112,25 @@ h2 {
     
     transition: all 0.2s ease-in-out;
 }
+/*
 .category:nth-child(1) {
     margin-left: 4%;
 }
+*/
 .category:hover {
     transform: scale(1.1);
     box-shadow: 0 0 30px 1px #AAA;
 }
 #htmlcss {
-    background: #ffffff url("images/html-back.png");
+    background: #ffffff url("images/html-back2.png");
     background-size: cover;
 }
 #rprog {
-    background: #ffffff url("images/r-back.png");
+    background: #ffffff url("images/r-back2.png");
     background-size: cover;
 }
 #pyth {
-    background: #ffffff url("images/python-back.png");
+    background: #ffffff url("images/python-back2.png");
     background-size: cover;
 }
 
