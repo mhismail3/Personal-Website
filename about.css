@@ -25,7 +25,7 @@ body {
     margin-bottom: 20px;
     width: 25%;
     text-align: right;
-/*    position: fixed;*/
+    position: fixed;
 }
 /*
 a {
@@ -78,9 +78,39 @@ h1:hover{
 h2 {
     margin-bottom: 30px;
 }
-#content p {
+.about-me p {
     margin-bottom: 40px;
 }
-footer {
+
+.education {
+    padding-top: 100px;
+    margin-bottom: 40px;
+}
+.experience {
     margin-top: 40px;
+}
+.volunteer {
+    margin-top: 40px;
+}
+.resume p {
+    font-size: 18px;
+}
+.resume .next {
+    margin-top: 20px;
+}
+
+h4{
+    font-size: 20px;
+    margin: 40px 0 10px 0;
+}
+#exp p {
+    margin-bottom: 10px;
+}
+
+
+footer {
+    margin-top: 100px;
+}
+footer .text {
+    font-size: 16px;
 }
