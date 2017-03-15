@@ -63,8 +63,10 @@ h1:hover{
 }
 #social {
     float: right;
+    margin-right: 5px;
 }
-#social li {
+#social i {
+    
     padding-left: 15px;
 }
 .linebreak {
