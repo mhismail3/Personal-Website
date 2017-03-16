@@ -23,7 +23,15 @@ body {
     font-family: 'Roboto Slab', serif;
     font-size: 22px;
 }
-
+a {
+    color: inherit;
+    transition: all 0.1s ease-in-out;
+}
+a:visited {color: inherit;}
+a:hover {
+    color: #d1175e;
+    text-decoration: underline;
+}
 
 #header {
     margin-bottom: 60px;
@@ -37,9 +45,11 @@ body {
 }
 .img-circle:hover {
     transform: scale(1.1);
+    filter: saturate(5);
     box-shadow: 0 0 10px 1px #AAA;
 }
 h1 {
+    display: inline;
     font-family: 'Cuprum', sans-serif;
     font-size: 54px;
     margin-bottom: 5px;
@@ -47,7 +57,7 @@ h1 {
 }
 h1:hover{
 /*    transform: scale(1.2);*/
-    color: #8f9fba;
+    color: #d1175e;
 }
 #nav, #social, #nav li, #social li {
     font-family: 'Cuprum', sans-serif;
@@ -66,8 +76,12 @@ h1:hover{
     margin-right: 5px;
 }
 #social i {
-    
     padding-left: 15px;
+    transition: all 0.2s ease-in-out;
+}
+#social i:hover {
+    transform: scale(1.2);
+    color: #d1175e;
 }
 .linebreak {
     margin-top: 10px;
@@ -95,7 +109,7 @@ h2 {
 .category {
 /*    float: left;*/
     
-    height: 100px;
+    height: 120px;
     width: 60%;
     margin: 0 auto 30px;
     

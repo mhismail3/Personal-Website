@@ -17,7 +17,15 @@ body {
     font-family: 'Roboto Slab', serif;
     font-size: 24px;
 }
-
+a {
+    color: inherit;
+    transition: all 0.1s ease-in-out;
+}
+a:visited {color: inherit;}
+a:hover {
+    color: #d1175e;
+    text-decoration: underline;
+}
 
 
 #header {
@@ -27,11 +35,7 @@ body {
     text-align: right;
     position: fixed;
 }
-/*
-a {
-    color: inherit;
-}
-*/
+
 .img-circle {
     border-radius: 50%;
     max-width: 60%;
@@ -40,6 +44,7 @@ a {
 }
 .img-circle:hover {
     transform: scale(1.1);
+    filter: saturate(5);
     box-shadow: 0 0 10px 1px #AAA;
 }
 h1 {
@@ -53,10 +58,10 @@ h1 {
 h1:hover{
 /*    font-size: 58px;*/
 /*    transform: scale(1.2);*/
-    color: #8f9fba;
+    color: #d1175e;
 }
 #nav {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 #nav li, #social li {
     font-family: 'Cuprum', sans-serif;
@@ -66,6 +71,11 @@ h1:hover{
 #social i {
     display: inline;
     padding-left: 15px;
+    transition: all 0.2s ease-in-out;
+}
+#social i:hover {
+    transform: scale(1.2);
+    color: #d1175e;
 }
 
 
