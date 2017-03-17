@@ -23,15 +23,22 @@ body {
     font-family: 'Roboto Slab', serif;
     font-size: 22px;
 }
-a {
+li a {
     color: inherit;
     transition: all 0.1s ease-in-out;
 }
 a:visited {color: inherit;}
-a:hover {
+li a:hover {
     color: #d1175e;
     text-decoration: underline;
 }
+.text a {
+    color: #d1175e;
+}
+.text a:hover {
+    text-decoration: underline;
+}
+
 
 #header {
     margin-bottom: 60px;
@@ -154,6 +161,12 @@ footer {
 }
 footer .text {
     font-size: 16px;
+}
+footer a {
+    color: #d1175e;
+}
+footer a:hover {
+    text-decoration: underline;
 }
 
 }

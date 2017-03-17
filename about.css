@@ -17,12 +17,12 @@ body {
     font-family: 'Roboto Slab', serif;
     font-size: 24px;
 }
-a {
+li a {
     color: inherit;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
-a:visited {color: inherit;}
-a:hover {
+a:visited { color: inherit; }
+li a:hover {
     color: #d1175e;
     text-decoration: underline;
 }
@@ -111,7 +111,7 @@ h2 {
 .resume p {
     font-size: 18px;
 }
-.resume .next {
+#edu .next {
     margin-top: 20px;
 }
 
@@ -132,4 +132,10 @@ footer {
 footer .text {
     font-size: 16px;
     padding-bottom: 5px;
+}
+footer a {
+    color: #d1175e;
+}
+footer a:hover {
+    text-decoration: underline;
 }
