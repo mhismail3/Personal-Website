@@ -5,6 +5,10 @@
     text-decoration: none;
 }
 
+/***************************
+    INITIAL
+***************************/
+
 html {
     background-color: #f6f8f7;
 }
@@ -23,11 +27,18 @@ body {
     font-family: 'Roboto Slab', serif;
     font-size: 22px;
 }
-li a {
+
+/***************************
+    LINKS
+***************************/
+
+a {
     color: inherit;
     transition: all 0.1s ease-in-out;
 }
-a:visited {color: inherit;}
+a:visited {
+    color: inherit;
+}
 li a:hover {
     color: #d1175e;
     text-decoration: underline;
@@ -39,6 +50,9 @@ li a:hover {
     text-decoration: underline;
 }
 
+/***************************
+    HEADER
+***************************/
 
 #header {
     margin-bottom: 60px;
@@ -60,10 +74,9 @@ h1 {
     font-family: 'Cuprum', sans-serif;
     font-size: 54px;
     margin-bottom: 5px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 h1:hover{
-/*    transform: scale(1.2);*/
     color: #d1175e;
 }
 #nav, #social, #nav li, #social li {
@@ -98,24 +111,23 @@ h1:hover{
     border-top: 1px solid #ccc;
     padding: 0;
 }
+
+/***************************
+    CONTENT
+***************************/
+
 #content p {
     margin-bottom: 30px;
 }
-
-
 h2 {
     font-family: 'Cuprum', sans-serif;
     font-size: 36px;
     padding-top: 30px;
 }
-
-
 #featured {
     margin-bottom: 60px;
 }
 .category {
-/*    float: left;*/
-    
     height: 120px;
     width: 60%;
     margin: 0 auto 30px;
@@ -133,11 +145,6 @@ h2 {
     
     transition: all 0.2s ease-in-out;
 }
-/*
-.category:nth-child(1) {
-    margin-left: 4%;
-}
-*/
 .category:hover {
     transform: scale(1.1);
     box-shadow: 0 0 30px 1px #AAA;
@@ -161,12 +168,4 @@ footer {
 }
 footer .text {
     font-size: 16px;
-}
-footer a {
-    color: #d1175e;
-}
-footer a:hover {
-    text-decoration: underline;
-}
-
 }

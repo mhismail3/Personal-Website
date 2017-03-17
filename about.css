@@ -5,6 +5,10 @@
     text-decoration: none;
 }
 
+/***************************
+    INITIAL
+***************************/
+
 html {
     background-color: #f6f8f7;
 }
@@ -17,19 +21,32 @@ body {
     font-family: 'Roboto Slab', serif;
     font-size: 24px;
 }
-li a {
+
+/***************************
+    LINKS
+***************************/
+
+a {
     color: inherit;
     transition: all 0.2s ease-in-out;
 }
-a:visited { color: inherit; }
+a:visited { 
+    color: inherit;
+}
 li a:hover {
     color: #d1175e;
     text-decoration: underline;
 }
-#nav .current {
+.text a {
     color: #d1175e;
+}
+.text a:hover {
     text-decoration: underline;
 }
+
+/***************************
+    HEADER
+***************************/
 
 #header {
     float: left;
@@ -38,7 +55,6 @@ li a:hover {
     text-align: right;
     position: fixed;
 }
-
 .img-circle {
     border-radius: 50%;
     max-width: 60%;
@@ -55,14 +71,13 @@ h1 {
     font-family: 'Cuprum', sans-serif;
     font-size: 30px;
     margin-top: 5px;
-    margin-bottom: 15px;
-    transition: all 0.2s ease-in-out;
+    margin-bottom: 10px;
+    transition: all 0.1s ease-in-out;
 }
 h1:hover{
-/*    font-size: 58px;*/
-/*    transform: scale(1.2);*/
     color: #d1175e;
 }
+
 #nav {
     margin-bottom: 15px;
 }
@@ -74,6 +89,10 @@ h1:hover{
     font-size: 24px;
     display: block;
 }
+#nav .current {
+    color: #d1175e;
+    text-decoration: underline;
+}
 #social i {
     display: inline;
     padding-left: 15px;
@@ -84,7 +103,9 @@ h1:hover{
     color: #d1175e;
 }
 
-
+/***************************
+    CONTENT BODY
+***************************/
 
 #content {
     width: 65%;
@@ -114,7 +135,6 @@ h2 {
 #edu .next {
     margin-top: 20px;
 }
-
 h4{
     font-size: 20px;
     margin: 40px 0 10px 0;
@@ -126,16 +146,14 @@ h4{
     text-decoration: underline;
 }
 
+/***************************
+    FOOTER
+***************************/
+
 footer {
     margin-top: 100px;
 }
 footer .text {
     font-size: 16px;
     padding-bottom: 5px;
-}
-footer a {
-    color: #d1175e;
-}
-footer a:hover {
-    text-decoration: underline;
 }
