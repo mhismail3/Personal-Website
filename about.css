@@ -17,9 +17,15 @@ body {
     width: 95%;
     margin: 100px auto;
 }
+h1, #nav li, #social li {
+    font-family: 'Cuprum', sans-serif;
+}
 .text {
     font-family: 'Roboto Slab', serif;
     font-size: 24px;
+}
+a, a:visited {
+    color: inherit;
 }
 
 /***************************
@@ -27,21 +33,18 @@ body {
 ***************************/
 
 a {
-    color: inherit;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
-a:visited { 
-    color: inherit;
-}
-li a:hover {
+a:hover {
     color: #d1175e;
     text-decoration: underline;
 }
 .text a {
     color: #d1175e;
 }
-.text a:hover {
-    text-decoration: underline;
+h1 a:hover {
+    color: #d1175e;
+    text-decoration: none;
 }
 
 /***************************
@@ -62,20 +65,13 @@ li a:hover {
     transition: all 0.2s ease-in-out;
 }
 .img-circle:hover {
-    transform: scale(1.1);
     filter: saturate(4);
     box-shadow: 0 0 10px 1px #AAA;
 }
 h1 {
-    
-    font-family: 'Cuprum', sans-serif;
     font-size: 30px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    margin: 5px 0 10px 0;
     transition: all 0.1s ease-in-out;
-}
-h1:hover{
-    color: #d1175e;
 }
 
 #nav {
@@ -85,7 +81,6 @@ h1:hover{
     margin-bottom: 4px;
 }
 #nav li, #social li {
-    font-family: 'Cuprum', sans-serif;
     font-size: 24px;
     display: block;
 }
@@ -112,10 +107,18 @@ h1:hover{
     margin-right: 50px;
     float: right;
 }
+#resume p {
+    font-size: 18px;
+}
 h2 {
     margin-bottom: 30px;
 }
-.about-me p {
+h4{
+    font-size: 20px;
+    margin: 40px 0 10px 0;
+}
+
+#about-me p {
     margin-bottom: 40px;
 }
 
@@ -123,21 +126,12 @@ h2 {
     padding-top: 100px;
     margin-bottom: 40px;
 }
-.experience {
-    margin-top: 40px;
-}
-.volunteer {
-    margin-top: 40px;
-}
-.resume p {
-    font-size: 18px;
-}
 #edu .next {
     margin-top: 20px;
 }
-h4{
-    font-size: 20px;
-    margin: 40px 0 10px 0;
+
+.experience {
+    margin-top: 40px;
 }
 #exp p {
     margin-bottom: 10px;
@@ -145,6 +139,10 @@ h4{
 #exp b{
     text-decoration: underline;
 }
+.volunteer {
+    margin-top: 40px;
+}
+
 
 /***************************
     FOOTER
