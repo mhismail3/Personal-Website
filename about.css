@@ -35,14 +35,14 @@ a, a:visited {
 a {
     transition: all 0.1s ease-in-out;
 }
-a:hover {
-    color: #d1175e;
-    text-decoration: underline;
-}
 .text a {
     color: #d1175e;
 }
-h1 a:hover {
+li a:hover, .text a:hover {
+    color: #d1175e;
+    text-decoration: underline;
+}
+h1 a:hover, #social i:hover {
     color: #d1175e;
     text-decoration: none;
 }
@@ -92,10 +92,7 @@ h1 {
     display: inline;
     padding-left: 15px;
     transition: all 0.2s ease-in-out;
-}
-#social i:hover {
-    transform: scale(1.2);
-    color: #d1175e;
+    
 }
 
 /***************************
@@ -107,29 +104,23 @@ h1 {
     margin-right: 50px;
     float: right;
 }
-#resume p {
-    font-size: 18px;
-}
+
 h2 {
     margin-bottom: 30px;
 }
-h4{
-    font-size: 20px;
-    margin: 40px 0 10px 0;
-}
-
 #about-me p {
     margin-bottom: 40px;
 }
-
-.education {
-    padding-top: 100px;
-    margin-bottom: 40px;
+#resume p {
+    font-size: 18px;
 }
 #edu .next {
     margin-top: 20px;
 }
-
+.education {
+    padding-top: 100px;
+    margin-bottom: 40px;
+}
 .experience {
     margin-top: 40px;
 }
@@ -139,10 +130,13 @@ h4{
 #exp b{
     text-decoration: underline;
 }
+h4{
+    font-size: 20px;
+    margin: 40px 0 10px 0;
+}
 .volunteer {
     margin-top: 40px;
 }
-
 
 /***************************
     FOOTER

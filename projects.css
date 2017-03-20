@@ -22,7 +22,7 @@ h1, #nav li, #social li {
 }
 .text {
     font-family: 'Roboto Slab', serif;
-    font-size: 22px;
+    font-size: 20px;
 }
 a, a:visited {
     color: inherit;
@@ -35,14 +35,14 @@ a, a:visited {
 a {
     transition: all 0.1s ease-in-out;
 }
-a:hover {
-    color: #d1175e;
-    text-decoration: underline;
-}
 .text a {
     color: #d1175e;
 }
-h1 a:hover {
+li a:hover, .text a:hover {
+    color: #d1175e;
+    text-decoration: underline;
+}
+h1 a:hover, #social i:hover {
     color: #d1175e;
     text-decoration: none;
 }
@@ -93,10 +93,6 @@ h1 {
     padding-left: 15px;
     transition: all 0.2s ease-in-out;
 }
-#social i:hover {
-    transform: scale(1.2);
-    color: #d1175e;
-}
 
 /***************************
     CONTENT BODY
@@ -114,11 +110,9 @@ h2 {
     margin-bottom: 60px;
 }
 
-
-
 .image {
     height: 250px;
-    border-radius: 1px;
+    border-radius: 3px;
     box-shadow: inset 0 0 5px 1px #AAA;
     
     margin-bottom: 10px;
@@ -126,9 +120,15 @@ h2 {
     transition: all 0.2s ease-in-out;
 }
 .image:hover {
-    box-shadow: inset 0 0 10px 1px #AAA;
+    box-shadow: inset 0 0 15px 3px #AAA;
 }
-
+#sendesign {
+    height: 400px;
+    box-shadow: inset 0 0 5px 1px #000;
+}
+#sendesign:hover {
+    box-shadow: inset 0 0 15px 3px #000;
+}
 
 #pyth {
     background: #ffffff url("images/python-back.png");
@@ -141,6 +141,20 @@ h2 {
 #htmlcss {
     background: #ffffff url("images/html-back.png");
     background-size: cover;
+}
+#sendesign {
+    background: #ffffff url("images/senior-design-profile.png");
+    background-size: cover;
+}
+
+.linebreak {
+    margin: 0 auto 60px auto;
+    display: block;
+    width: 40%;
+    border-top: 4px solid #ccc;
+}
+.longtext {
+    font-size: 26px;
 }
 
 
