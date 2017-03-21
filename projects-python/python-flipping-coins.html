@@ -7,7 +7,7 @@
         <title>About Me</title>
         <link href="https://fonts.googleapis.com/css?family=Cuprum:700|Roboto+Slab" rel="stylesheet">
         
-        <link type="text/css" rel="stylesheet" href="../projects.css">
+        <link type="text/css" rel="stylesheet" href="single-project.css">
         
         <script src="https://use.fontawesome.com/a0d680fd61.js"></script>
     </head>
@@ -33,7 +33,136 @@
 
         <div id="content" class="text">
             
+            <div id="specific-title">
+                <h2>Flipping Coins</h2>
+            </div>
             
+            <p><u>The Problem</u>: How many ways can a coin be tossed 8 times so that there are exactly 4 heads and no two heads occur in a row?</p>
+            
+            <div class="eight-coins">
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+            </div>
+            
+            <p>At first glance, it's not immediately obvious how to go about solving this problem using combinations. It's easy to account for the possibilities when flipping a certain number of coins, or when looking to get a certain number of an outcome. But to calculate the number of outcomes in some type of order (e.g. no two in a row) can be tricky.</p>
+            
+            <p>Doing it by hand as a first attempt, we can see that the list of possible outcomes is actually quite small:</p>
+            
+            <div class="eight-coins">
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+            </div>
+            
+            <div class="eight-coins">
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+            </div>
+            
+            <div class="eight-coins">
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+            </div>
+            
+            <div class="eight-coins">
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+            </div>
+            
+            <div class="eight-coins">
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+            </div>
+            
+            <p>So we have 5 cases, which seems to account for all of the possible variations on the answer that we're looking for. So what's the mathematical solution?</p>
+            
+            <p>One possible way to go about solving the problem is to write a simple brute-force program that can experimentally show us what the outcome might be.</p>
+            
+            <div class="code-block">
+                <p>import random</p>
+                <br>
+                <p>def flipCoins():</p>
+                <p>&emsp;&emsp;&emsp;cases = list()</p>
+                <p>&emsp;&emsp;&emsp;count = 0</p>
+                <br>
+                <p>&emsp;&emsp;&emsp;while count &lt; 25600:</p>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;noTwo = True</p>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;case = list()</p>
+                <br>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;for i in range(8):</p> <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if case == []: case.append(random.randint(0,1))</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;else:</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;tmp = random.randint(0,1)</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;case.append(tmp)</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if tmp == 1 and case[i-1] == 1:</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;noTwo = False</p><p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;break</p>
+                <br>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if case.count(1) == 4 and notwo == True: cases.append(1)</p>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;else: cases.append(0)</p>
+                <br>
+                <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;count += 1</p>
+                <br>
+                <p>&emsp;&emsp;&emsp;print(cases.count(1), len(cases))</p>
+                <br>
+                <p>if __name__ == '__main__':</p>
+                <p>&emsp;&emsp;&emsp;flipCoins()</p>
+            </div>
+            
+            <p>This short program basically flips eight coins and stores the results of each flip in a list. If both the current coin flip and previous coin flip were 1's (heads), then the case is considered False. The program then checks to see if there were exactly 4 heads out of 8 flips, and that the case is True. Only then will it consider the case to be a "good" outcome (one of the 5 possibilities above).</p>
+            
+            <p>Because there are 256 possible arrangements for flipping 8 coins, and our hypothesis is that exactly 5 of those 256 arrangements give us the result we're looking for, then running this case 256 times would theoretically give us 5 "good" outcomes. However, because of how randomness works, this isn't likely to be the case every time.</p>
+            
+            <p>To make the result a bit more accurate, we can use the Central Limit Theorem, which essentially means that with a large enough number of coin flips, the probability that our experimental data will resemble our expected results increases. So we run the case 25,600 times, expecting around 500 "good" cases. And, after calculating the standard deviation of the coin flips and expected probability, we should see between 478 and 522 "good" cases approximately 68% of the time.</p>
+            
+            <p>If you run the program, you will likely get different values than mine, but I suspect you will see them fall within the range above most of the time as well. After running the program a few times, I got the following output:</p>
+            
+            <div class="code-block">
+                <p>541 25600</p>
+                <p>526 25600</p>
+                <p>505 25600</p>
+                <p>487 25600</p>
+                <p>480 25600</p>
+                <p>478 25600</p>
+                <p>456 25600</p>
+                <p>475 25600</p>
+                <p>518 25600</p>
+            </div>
+            
+            <p>The results fall quite neatly in line with what we expected.</p>
+            
+            <p>This may seem like a fairly simple problem, but it demonstrates the significance of being able to implement a simple enough algorithm into a program, to either draw a conclusion or confirm an existing hypothesis, when the theoretical solution isn't always clear.</p>
+            
+            <br><br>
+            <p>You can find the original code here.</p>
             
             <footer>
                 <p id="copyright" class="text">Made by <a href="about.html">me</a>. &copy; 2017</p>
