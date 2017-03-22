@@ -21,13 +21,16 @@ header {
 body {
     font-family: 'Roboto Slab', serif;
 }
-a, a:visited {
+a {
     transition: all 0.1s ease-in-out;
 }
 
 /***************************
     LINKS
 ***************************/
+
+
+
 
 a:hover {
     color: #d1175e;
