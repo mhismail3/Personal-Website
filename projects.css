@@ -113,8 +113,6 @@ h1 {
 }
 #nav li {
     margin-bottom: 4px;
-}
-#nav li, #social li {
     display: block;
 }
 #social i {
@@ -126,6 +124,7 @@ h1 {
     margin-right: 50px;
     float: right;
 }
+
 h2 {
     margin-bottom: 10px;
 }

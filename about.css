@@ -106,7 +106,6 @@ header {
 }
 h1 {
     margin: 5px 0 10px 0;
-    transition: all 0.1s ease-in-out;
 }
 #nav {
     margin-bottom: 15px;
@@ -124,6 +123,7 @@ h1 {
     margin-right: 50px;
     float: right;
 }
+
 h2 {
     margin-bottom: 30px;
 }
