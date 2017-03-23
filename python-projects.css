@@ -1,0 +1,55 @@
+/***************************
+    FONTS
+***************************/
+
+h2 {
+    font-size: 40px;
+}
+.feat-code-block p {
+    font-family: monaco, monospace;
+    font-size: 26px;
+}
+
+
+
+/***************************
+    LINKS
+***************************/
+
+.blocklink {
+    color: inherit;
+}
+.blocklink:hover {
+    color: #d1175e;
+    text-decoration: none;
+}
+
+
+
+/***************************
+    SIZING & ALIGNMENT
+***************************/
+
+h2 {
+    margin: 0 0 30px 70px;
+}
+.feat-code-block {
+    height: 150px;
+    background-color: #EEE;
+    box-shadow: 2px 2px 5px 1px #AAA;
+    
+    margin-bottom: 50px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+    transition: all 0.2s ease-in-out;
+}
+.feat-code-block:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 15px 1px #AAA;
+}
+.feat-code-block p {
+    margin-left: 70px;
+}

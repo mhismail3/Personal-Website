@@ -1,0 +1,42 @@
+/***************************
+    FONTS
+***************************/
+
+h2 {
+    font-size: 40px;
+}
+figcaption {
+    font-size: 13px;
+    color: #999;
+}
+
+
+
+/***************************
+    SIZING & ALIGNMENT
+***************************/
+
+section p{
+    margin-bottom: 30px;
+}
+h2 {
+    margin-bottom: 30px;
+}
+#html-brackets {
+    width: 100%;
+    
+    box-shadow: 2px 2px 5px 1px #AAA;
+    
+    transition: all 0.2s ease-in-out;
+}
+#html-brackets:hover {
+    margin-bottom: 5px;
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 15px 2px #999;
+}
+figcaption {
+    margin: 0 0 30px 20px;
+}
+footer p {
+    margin-bottom: 0;
+}
