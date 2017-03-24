@@ -36,10 +36,35 @@
 
             <section class="main-content">
 
+                <div class="image" id="sendesign"></div>
+                
                 <h2>Providing Sensory Feedback for Upper Limb Amputees</h2>
 
+                <p>Prosthesis users encounter many fine motor challenges throughout their daily activities. Due to the lack of sensory feedback in current prostheses, we designed an affordable sensory feedback system implemented into a 3D-printed myoelectric prosthetic hand. We inserted barometric pressure sensors into the fingertips and proximal finger regions in order to measure forces applied to and by the prosthetic hand. Force information is conveyed to the user through electrotactile stimulation via electrodes located on the upper arm, while the magnitude of stimulation felt by the user is proportional to the reading from the corresponding pressure sensor.</p>
                 
-
+                <div class="imgcaption-60">
+                    <img src="images/sendesign-egghold.png" alt="Prosthetic arm holding egg" class="content-image">
+                    <figcaption>A low-force task as performed by the $40,000 'beibonic3' prosthesis.</figcaption>
+                </div>
+                
+                <p>The purpose of implementing electrotactile feedback into a prosthetic hand is that it allows the wearer to use the prosthesis with high precision for both high-force and low-force tasks. For example, the hand needs to be able to hold an egg without breaking it or lift a heavy box without dropping it. Users exhibit the increased ability to perform functional tasks as a result of experiments conducted at the end of the design phase. The pressure sensors with myoelectric feedback to the user was tested with amputee subjects for effectiveness.</p>
+                
+                <p>Many factors were considered when selecting design outputs and verifications for the project requirements. One of our first major design decisions involved the selection of a mode of stimulation. We compared electrotactile, vibrotactile, and a pressure analog as methods for stimulation using an evaluation table. By rating the importance of various features, we found electrotactile stimulation to be the best option for our device. These ratings can be found in the full report. By selecting electrotactile stimulation, we verified that our stimulation would be silent, thus satisfying one of our design requirements. This design choice also helped ensure that our device would be light weight. Because wires and surface electrodes are so lightweight and compact, an electrotactile system would be not only lighter, but more aesthetic than a bulky mechanical system. Additionally, because electrode placement is forgiving and surface electrodes are so easy to remove and replace, our device will be easy to put on and take off.</p>
+                
+                <div class="multi-image">
+                    <img src="images/sendesign-finger.png" alt="Finger CAD" id="sdfinger">
+                    <img src="images/sendesign-sensor-placement.png" alt="Sensor Placement" id="sdsensor">
+                    <div style="clear:both;"></div>
+                </div>
+                
+                <p>Upon choosing electrotactile stimulation as our method of choice, we began to consider the placement of pressure sensors within the hand to optimize the user’s ability to distinguish both the magnitude and location of the pressures exerted by the hand. We knew that we would need to include multiple pressure sensors in the hand in order to sufficiently detect the most significant forces, but we were initially unsure as to the precise location of these key forces.</p>
+                
+                <p>To determine the optimal pressure sensor placement, we performed an experiment in which we painted various objects and examined the surfaces of the hand used to interact with them. We then selected the six most commonly used areas of the hand as locations for pressure sensors. This experiment can be seen in greater detail under the testing section of the full report.</p>
+                
+                <p>We also performed Six Sigma testing to determine the optimal material and sensor depth in order to optimize the sensitivity of the pressure sensors for daily tasks. The sensors needed to be sensitive enough to detect small forces, allowing the user to interact with delicate objects. The sensors also needed to have a saturation high enough to allow the user to know when he is exerting a large enough force to lift a heavy object.</p>
+                
+                <p class="bigger">The full report and final presentation, as well as all relevant files, can be found <a href="">here</a>.</p>
+                    
                 <footer>
                     <p>Made by <a href="about.html">me</a>. &copy; 2017</p>
                 </footer>
