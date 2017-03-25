@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        
+        <title>Python - Flipping Coins</title>
+        <link href="https://fonts.googleapis.com/css?family=Cuprum:700|Roboto+Slab" rel="stylesheet">
+        
+        <link type="text/css" rel="stylesheet" href="../page-init.css">
+        <link type="text/css" rel="stylesheet" href="single-project.css">
+        
+        <script src="https://use.fontawesome.com/a0d680fd61.js"></script>
+    </head>
+    
+    
+    <body>
+        <main>
+            <header>
+                <img class="img-circle" alt="profile-image" src="../images/profile.jpg">
+                <h1><a href="index.html">MOHSIN ISMAIL</a></h1>
+
+                <ul id="nav">
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../projects.html" class="current">Projects</a></li>
+                    <li><a href="https://introversedblog.wordpress.com/" target="_blank">Blog</a></li>
+                </ul>
+
+                <ul id="social">
+                    <a href="mailto:mhismail3@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/mhismail3/" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://github.com/mhismail3" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                </ul>          
+            </header>
+
+            <section class="main-content">
+
+                <div id="title-background">
+                    <h2>Getting File Information</h2>
+                </div>
+
+                <p>This program takes as input from the user a file or directory path and prints out relevant information pertaining to the file.</p>
+                
+                <p>First, we import the necessary packages.</p>
+                
+                <div class="code-block">
+                    <p>import os, stat, time</p>
+                </div>
+                
+                <p>Next, we get a file name from the user and pass it to the os.stat() function, storing the information in a dictionary. This dictionary can then be used to print out some of the information that we're looking for.</p>
+                
+                <div class="code-block">
+                    <p>fileName = input("> ")</p>
+                    <p>try:</p>
+                    <p>&emsp;&emsp;&emsp;fileStats = os.stat(fileName)</p>
+                    <p>except OSError:</p>
+                    <p>&emsp;&emsp;&emsp;print("\nNameError : No such file or directory\n")</p>
+                    <br>
+                    <p>fileInfo = {</p>
+                    <p>&emsp;&emsp;&emsp;'fname': fileName,</p>
+                    <p>&emsp;&emsp;&emsp;'fsize': fileStats.st_size,</p>
+                    <p>&emsp;&emsp;&emsp;'f_lm' : time.strftime("%d/%m/%Y %I:%M:%S %p",</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;time.localtime(fileStats.st_mtime)),</p>
+                    
+                    <p>&emsp;&emsp;&emsp;'f_la' : time.strftime("%d/%m/%Y %I:%M:%S %p",</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;time.localtime(fileStats.st_atime)),</p>
+                    
+                    <p>&emsp;&emsp;&emsp;'f_ct' : time.strftime("%d/%m/%Y %I:%M:%S %p",</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;time.localtime(fileStats.st_ctime))</p>
+                    <p>}</p>
+                    <br>
+                    <p>print(("\nfile name = {fname}, file size = {fsize} bytes, " +</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"last modified = {f_lm}, last accessed = {f_la}, " +</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"creation time = {f_ct}\n").format(**fileInfo))</p>
+                </div>
+                
+                <p>Finally, we can print out let the user know whether the file name he or she passed in was a dictionary or not, and present some more information about what other parameters can be accessed using the os.stat() function.</p>
+                
+                <div class="code-block">
+                    <p>if stat.S_ISDIR(fileStats.st_mode):</p>
+                    <p>&emsp;&emsp;&emsp;print("This is a directory")</p>
+                    <p>else:</p>
+                    <p>&emsp;&emsp;&emsp;print("This is not a directory")</p>
+                    <p>&emsp;&emsp;&emsp;print("The os.stat({}) tuple:".format(fileName))</p>
+                    <p>&emsp;&emsp;&emsp;print(fileStats)</p>
+                    <p>&emsp;&emsp;&emsp;print("\nThe above tuple has the following sequence:")</p>
+                    <p>&emsp;&emsp;&emsp;print("""st_mode (protection bits), st_ino (iniode number),</p>
+                    <p>&emsp;&emsp;&emsp;st_dev (device), st_nlink (number of hard links),</p>
+                    <p>&emsp;&emsp;&emsp;st_uid (user ID of owner), st_gid (group ID of owner),</p>
+                    <p>&emsp;&emsp;&emsp;st_size (file size in bytes), st_atime (last access time in</p>
+                    <p>&emsp;&emsp;&emsp;seconds since epoch), st_mtime (last modification time),</p>
+                    <p>&emsp;&emsp;&emsp;st_ctime (time of creation on Windows)"""</p>
+                    <p>&emsp;&emsp;&emsp;)</p>
+                </div>
+                
+                <p>This program is used to illustrate some of the functions that the built-in modules of Python can provide when dealing with files and file types. </p>
+                
+                <br><br>
+                <p>You can find the original code <a href="https://github.com/mhismail3/Various-Python-Scripts/blob/master/get-file-info.py" target="_blank">here</a>.</p>
+                
+                
+                <footer>
+                    <p id="copyright" class="text">Made by <a href="../about.html">me</a>. &copy; 2017</p>
+                </footer>
+            </section>
+        </main>
+    </body>
+</html>
