@@ -96,3 +96,21 @@ footer p{
     padding-bottom: 5px;
     margin: 100px 0 0 0 ;
 }
+
+
+.colors * {
+    display: inline-block;
+    border-radius: 2px;
+}
+.one {
+    height: 20px;
+    width: 20%;
+    background-color: #999;
+/*    display: inline-block;*/
+}
+.two {
+    height: 20px;
+    width: 5%;
+    background-color: #77a36a;
+/*    display: inline-block;*/
+}

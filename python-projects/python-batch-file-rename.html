@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        
+        <title>Python - Flipping Coins</title>
+        <link href="https://fonts.googleapis.com/css?family=Cuprum:700|Roboto+Slab" rel="stylesheet">
+        
+        <link type="text/css" rel="stylesheet" href="../page-init.css">
+        <link type="text/css" rel="stylesheet" href="single-project.css">
+        
+        <script src="https://use.fontawesome.com/a0d680fd61.js"></script>
+    </head>
+    
+    
+    <body>
+        <main>
+            <header>
+                <img class="img-circle" alt="profile-image" src="../images/profile.jpg">
+                <h1><a href="index.html">MOHSIN ISMAIL</a></h1>
+
+                <ul id="nav">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="current">Projects</a></li>
+                    <li><a href="https://introversedblog.wordpress.com/" target="_blank">Blog</a></li>
+                </ul>
+
+                <ul id="social">
+                    <a href="mailto:mhismail3@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/mhismail3/" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://github.com/mhismail3" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                </ul>          
+            </header>
+
+            <section class="main-content">
+
+                <div id="title-background">
+                    <h2>Batch Renaming Files Extensions</h2>
+                </div>
+
+                <p>This script takes a directory, an old and a new file extension and renames all of the files in the specified directory that have the old extension with the new extension.</p>
+                
+<!--
+                <div class="colors">
+                    <div class="one"></div> <p>.</p>
+                    <div class="two"></div>
+                </div>
+                <div class="colors">
+                    <div class="one"></div> <p>.</p>
+                    <div class="two"></div>
+                </div>
+-->
+                
+                <p>First, we import the necessary packages and define a couple of functions.</p>
+                
+                <div class="code-block">
+                    <p>import os, argparse</p>
+                    <br>
+                    <p>def rename(workingDirectory, oldExt, newExt):</p>
+                    <p>&emsp;&emsp;&emsp;for file in os.listdir(workingDirectory):</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;fileName, fileExt = os.path.splitext(file)</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if oldExt == fileExt:</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;os.rename(</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;os.path.join(workingDirectory, file),</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;os.path.join(workingDirectory, fileName+newExt)</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)</p>
+                    <br>
+                    <p>def get_parser():</p>
+                    <p>&emsp;&emsp;&emsp;parser = argparse.ArgumentParser(description='change extension of files in a working directory')</p>
+                    <p>&emsp;&emsp;&emsp;parser.add_argument('workingDirectory', type=str, nargs=1, help='the directory where to change extension')</p>
+                    <p>&emsp;&emsp;&emsp;parser.add_argument('oldExt', type=str, nargs=1, help='old extension')</p>
+                    <p>&emsp;&emsp;&emsp;parser.add_argument('newExt', type=str, nargs=1, help='new extension')</p>
+                    <p>&emsp;&emsp;&emsp;return parser</p>
+                </div>
+                
+                <p>The rename() function takes the same three input arguments and loops through all of the files present in the directory. For any file that ends with the old extension, the function removes the extension and appends the new one.</p>
+                
+                <p>The get_parser() creates and returns an ArgumentParser object, making it easy for the user to pass command-line arguments to the script.</p>
+                
+                <p>With these two functions defined, we can write the rest of the script.</p>
+                
+                <div class="code-block">
+                    <p>def main():</p>
+                    <br>
+                    <p>&emsp;&emsp;&emsp;parser = get_parser()</p>
+                    <p>&emsp;&emsp;&emsp;args = vars(parser.parse_args())</p>
+                    <br>
+                    <p>&emsp;&emsp;&emsp;workingDirectory = args['workingDirectory'][0]</p>
+                    <p>&emsp;&emsp;&emsp;oldExt = args['oldExt'][0]</p>
+                    <p>&emsp;&emsp;&emsp;newExt = args['newExt'][0]</p>
+                    <br>
+                    <p>&emsp;&emsp;&emsp;rename(workingDirectory, oldExt, newExt)</p>
+                    <br>
+                    <p>if __name__ == '__main__':</p>
+                    <p>&emsp;&emsp;&emsp;main()</p>
+                </div>
+                
+                <p>Here, the program gets the ArgumentParser object and, assuming that the user passed the necessary three arguments at the command line, parses the arguments. The vars() function returns a dictionary of ordered pairs, with the inputted arguments as the first items of the pairs. The program then uses these values as inputs for the rename() function.</p>
+                
+                <p>After running this program, the files in the directory will be renamed.</p>
+                
+                <br><br>
+                <p>You can find the original code <a href="https://github.com/mhismail3/Various-Python-Scripts/blob/master/file-extension.py" target="_blank">here</a>.</p>
+                
+                <footer>
+                    <p id="copyright" class="text">Made by <a href="about.html">me</a>. &copy; 2017</p>
+                </footer>
+            </section>
+        </main>
+    </body>
+</html>
