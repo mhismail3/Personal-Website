@@ -182,3 +182,14 @@ footer {
     background: #fff url("images/html-back2.png");
     background-size: cover;
 }
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    html {
+        background-color: antiquewhite;
+    }
+}

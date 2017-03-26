@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        
+        <title>Python - Batch Renaming</title>
+        <link href="https://fonts.googleapis.com/css?family=Cuprum:700|Roboto+Slab" rel="stylesheet">
+        
+        <link type="text/css" rel="stylesheet" href="../page-init.css">
+        <link type="text/css" rel="stylesheet" href="single-project.css">
+        
+        <script src="https://use.fontawesome.com/a0d680fd61.js"></script>
+    </head>
+    
+    
+    <body>
+        <main>
+            <header>
+                <img class="img-circle" alt="profile-image" src="../images/profile.jpg">
+                <h1><a href="index.html">MOHSIN ISMAIL</a></h1>
+
+                <ul id="nav">
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../projects.html" class="current">Projects</a></li>
+                    <li><a href="https://introversedblog.wordpress.com/" target="_blank">Blog</a></li>
+                </ul>
+
+                <ul id="social">
+                    <a href="mailto:mhismail3@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/mhismail3/" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                    <a href="https://github.com/mhismail3" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                </ul>          
+            </header>
+
+            <section class="main-content">
+
+                <div id="title-background">
+                    <h2>Analyses on Hospital Rankings</h2>
+                </div>
+
+                <p class="disclaimer">The original problem comes from the Data Science Specialization Course on Coursera, from where I got some guidance on formulating these solutions. The actual solutions, however, are my own work.</p>
+                
+                <p>This program takes data on the mortality rates for certain conditions, for a list of hospitals from every state, and is able to rank the hospitals based on the lowest mortality rate for a certain outcome.</p>
+                
+                <div class="code-block">
+                    <p>rankhospital &lt;- function(state, outcome, num = "best") {</p>
+                    <br>
+                    <p>&emsp;&emsp;&emsp;&emsp;data &lt;- read.csv("outcome-of-care-measures.csv", na.strings = "Not Available", stringsAsFactors = FALSE)</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;outcomes &lt;- c("heart attack"=11, "heart failure"=17, "pneumonia"=23)</p>
+                    <br>
+                    <p>&emsp;&emsp;&emsp;&emsp;if(!(state %in% data$State)) stop("invalid state")</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;if(!(outcome %in% names(outcomes))) stop("invalid outcome")</p>
+                    <br>
+                    <p>&emsp;&emsp;&emsp;&emsp;data &lt;- data[data$State == state, c("Hospital.Name", names(data[outcomes[outcome]]))]</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;data &lt;- data[complete.cases(data), ]</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;data &lt;- data[order(data[2], data[1]), ]</p>
+                    <br>
+                    <p>&emsp;&emsp;&emsp;&emsp;if(num == "best") return(data[1, "Hospital.Name"])</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;if(num == "worst") return(data[nrow(data), "Hospital.Name"])</p>
+                    <br>
+                    <p>&emsp;&emsp;&emsp;&emsp;data[num, "Hospital.Name"]</p>
+                    <p>}</p>
+                </div>
+                
+                <p>The function rankhospital() takes as input a state, one of three specified outcomes, and a rank. It reads into a data frame the hospital data from a specified file, and subsets the state, hospital name, and outcome columns. After eliminating NA values, the function orders the remaining data first by state, and then by increasing mortality rate for the specified outcome. Finally, the function returns the hospital name for the specified rank.</p>
+                <br>
+                <p>The other functions included in the R file are similar in function to the program above. If you would like to see the full original code, as well as the included CSV files and code book, go <a href="https://github.com/mhismail3/Various-R-Scripts" target="_blank">here</a>.</p>
+                
+                
+                <footer>
+                    <p id="copyright" class="text">Made by <a href="../about.html">me</a>. &copy; 2017</p>
+                </footer>
+            </section>
+        </main>
+    </body>
+</html>
