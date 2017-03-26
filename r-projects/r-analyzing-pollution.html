@@ -36,72 +36,64 @@
             <section class="main-content">
 
                 <div id="title-background">
-                    <h2>Batch Renaming Files Extensions</h2>
+                    <h2>Analyses on Pollution Data</h2>
                 </div>
 
-                <p>This program takes a directory, an old and a new file extension and renames all of the files in the specified directory that have the old extension with the new extension.</p>
+                <p>The original problem comes from the Data Science Specialization Course on Coursera, from where I got some guidance on formulating these solutions. The actual solutions, however, are my own work.</p>
                 
-<!--
-                <div class="colors">
-                    <div class="one"></div> <p>.</p>
-                    <div class="two"></div>
-                </div>
-                <div class="colors">
-                    <div class="one"></div> <p>.</p>
-                    <div class="two"></div>
-                </div>
--->
-                
-                <p>First, we import the necessary packages and define a couple of functions.</p>
+                <p>This program makes use of a set of 332 CSV files, each of which corresponds to a specific pollution monitor. Each monitor has an corresponding ID, and collects data for a consecutive number of days on sulfate and nitrate concentrations in the air. The CSV files can be found <a href="">here</a>.</p>
                 
                 <div class="code-block">
-                    <p>import os, argparse</p>
+                    <p>pollutantmean &lt;- function(directory, pollutant, id = 1:332) {</p>
                     <br>
-                    <p>def rename(workingDirectory, oldExt, newExt):</p>
-                    <p>&emsp;&emsp;&emsp;for file in os.listdir(workingDirectory):</p>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;fileName, fileExt = os.path.splitext(file)</p>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;if oldExt == fileExt:</p>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;os.rename(</p>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;os.path.join(workingDirectory, file),</p>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;os.path.join(workingDirectory, fileName+newExt)</p>
-                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;)</p>
-                    <br>
-                    <p>def get_parser():</p>
-                    <p>&emsp;&emsp;&emsp;parser = argparse.ArgumentParser(description='change extension of files in a working directory')</p>
-                    <p>&emsp;&emsp;&emsp;parser.add_argument('workingDirectory', type=str, nargs=1, help='the directory where to change extension')</p>
-                    <p>&emsp;&emsp;&emsp;parser.add_argument('oldExt', type=str, nargs=1, help='old extension')</p>
-                    <p>&emsp;&emsp;&emsp;parser.add_argument('newExt', type=str, nargs=1, help='new extension')</p>
-                    <p>&emsp;&emsp;&emsp;return parser</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;mean(do.call(rbind, lapply(dir(directory, full.names = TRUE)[id], </p>
+                    <p>&emsp;&emsp;&emsp;&emsp;read.csv))[, pollutant], na.rm = TRUE)</p>
+                    <p>}</p>
                 </div>
                 
-                <p>The rename() function takes the same three input arguments and loops through all of the files present in the directory. For any file that ends with the old extension, the function removes the extension and appends the new one.</p>
+                <p>The first function, pollutantmean(), takes as inputs the directory containing the CSV files, a pollutant (either sulfate or nitrate), and a range of IDs corresponding to the CSV files we want to look at.</p>
                 
-                <p>The get_parser() creates and returns an ArgumentParser object, making it easy for the user to pass command-line arguments to the script.</p>
+                <p>We get the directory file names corresponding to the ID values we specified, and then use lapply() to apply read.csv() to all of these files. We then call rbind() on all of the resulting data frames to merge them, removing NA values in the process, and then call mean() on the resulting data frame.</p>
                 
-                <p>With these two functions defined, we can write the rest of the script.</p>
+                <p>The end value we get is the mean of the data for the specified pollutant column across all specified ID monitors.</p>
                 
                 <div class="code-block">
-                    <p>def main():</p>
+                    <p>complete &lt;- function(directory, id = 1:332) {</p>
                     <br>
-                    <p>&emsp;&emsp;&emsp;parser = get_parser()</p>
-                    <p>&emsp;&emsp;&emsp;args = vars(parser.parse_args())</p>
-                    <br>
-                    <p>&emsp;&emsp;&emsp;workingDirectory = args['workingDirectory'][0]</p>
-                    <p>&emsp;&emsp;&emsp;oldExt = args['oldExt'][0]</p>
-                    <p>&emsp;&emsp;&emsp;newExt = args['newExt'][0]</p>
-                    <br>
-                    <p>&emsp;&emsp;&emsp;rename(workingDirectory, oldExt, newExt)</p>
-                    <br>
-                    <p>if __name__ == '__main__':</p>
-                    <p>&emsp;&emsp;&emsp;main()</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;data.frame("id"=id, "nobs"=do.call(rbind, lapply(lapply(lapply(</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;dir(directory, full.names = TRUE)[id], read.csv),</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;function(x) complete.cases(x$nitrate, x$sulfate)), sum)))</p>
+                    <p>}</p>
                 </div>
                 
-                <p>Here, the program gets the ArgumentParser object and, assuming that the user passed the necessary three arguments at the command line, parses the arguments. The vars() function returns a dictionary of ordered pairs, with the inputted arguments as the first items of the pairs. The program then uses these values as inputs for the rename() function.</p>
+                <p>The second function, complete(), returns a data frame where the first column is an ID number and the second column is the number of complete cases in the corresponding file. It takes as inputs the directory with the CSV files and a range of IDs corresponding to the CSV files.</p>
                 
-                <p>After running this program, the files in the directory will be renamed.</p>
+                <p>First, we get use the range of IDs to get the specified files and then use read.csv() with lapply() to read them into data frames. We then use lapply() again to get only the complete cases in each of the data frames, and then lapply() one more time to get the sum of these complete cases.</p>
+                
+                <div class="code-block">
+                    <p>corr &lt;- function(directory, threshold = 0) {</p>
+                    <br>
+                    <p>&emsp;&emsp;&emsp;&emsp;cases &lt;- complete(directory)</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;case_id &lt;- cases$id[cases$nobs >= threshold]</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;correlations &lt;- numeric()</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;if(length(case_id != 0)) {</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;for(i in 1:length(case_id)) {</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;data &lt;- na.omit(read.csv(sprintf("%s%03d.csv", directory,</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;case_id[i])))</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;corvalue &lt;- cor(data$nitrate, data$sulfate)</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;correlations &lt;- na.omit(c(correlations, corvalue))</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;}</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;correlations</p>
+                    <p>}</p>
+                </div>
+                
+                <p>The third function, corr(), takes as input the directory containing the CSV files and a threshold value. The function returns a numeric vector with correlation values between nitrate and sulfate for only the monitors whose number of complete cases meets the threshold value.</p>
+                
+                <p>corr() first makes use of the complete() function to get the number of complete cases for each monitor, and then gets only the ID values whose complete cases meets the threshold. The function then reads in the data for each corresponding file into a data frame and calculates the correlation for the nitrate and sulfate values for each monitor, adding each final correlation value to the initialized vector.</p>
                 
                 <br><br>
-                <p>You can find the original code <a href="https://github.com/mhismail3/Various-Python-Scripts/blob/master/file-extension.py" target="_blank">here</a>.</p>
+                <p>You can find the original code <a href="https://github.com/mhismail3/Various-R-Scripts" target="_blank">here</a>, commented with more specific descriptions detailing the exact function of each line in the program.</p>
                 
                 <footer>
                     <p id="copyright" class="text">Made by <a href="../about.html">me</a>. &copy; 2017</p>
