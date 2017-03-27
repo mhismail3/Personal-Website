@@ -9,28 +9,28 @@ header {
     font-family: 'Roboto Slab', serif;
 }
 h1 {
-    font-size: 30px;
+    font-size: 1.875em;
 }
 #nav li {
-    font-size: 24px;
+    font-size: 1.5em;
 }
 h2 {
-    font-size: 36px;
+    font-size: 2.25em;
 }
 #about-me p{
-    font-size: 24px;
+    font-size: 1.5em;
 }
 #resume p {
-    font-size: 18px;
+    font-size: 1.125em;
 }
 h3 {
-    font-size: 26px;
+    font-size: 1.625em;
 }
 h4 {
-    font-size: 20px;
+    font-size: 1.25em;
 }
 footer {
-    font-size: 16px;
+    font-size: 1em;
 }
 
 
@@ -91,4 +91,16 @@ h4{
 footer {
     margin-top: 100px;
     padding-bottom: 5px;
+}
+
+
+
+
+@media only screen and (max-width: 850px) {
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        padding-top: 30px; 
+    }
 }

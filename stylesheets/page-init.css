@@ -12,9 +12,9 @@
 html {
     background-color: #f6f8f7;
 }
-main {
-    width: 95%;
-    margin: 100px auto;
+
+body {
+    font-size: 100%;
 }
 
 
@@ -23,39 +23,114 @@ main {
     INIT SIZING & ALIGNMENT
 ***************************/
 
-header {
-    margin-bottom: 20px;
-    width: 25%;
-    float: left;
-    text-align: right;
-    position: fixed;
+@media only screen and (min-width: 851px) {
+    
+    main {
+        width: 95%;
+        margin: 100px auto;
+    }
+    header {
+        width: 25%;
+        float: left;
+        text-align: right;
+        position: fixed;
+    }
+    .img-circle {
+        border-radius: 50%;
+        max-width: 60%;
+        box-shadow: 0 0 5px 1px #AAA;
+        transition: all 0.2s ease-in-out;
+    }
+    .img-circle:hover {
+        filter: saturate(4);
+        box-shadow: 0 0 10px 1px #AAA;
+    }
+    h1 {
+        margin: 5px 0 10px 0;
+    }
+    #nav {
+        margin-bottom: 15px;
+    }
+    #nav li {
+        margin-bottom: 4px;
+        display: block;
+    }
+    #social i {
+        display: inline;
+        padding-left: 15px;
+    }
+    .main-content {
+        width: 65%;
+        margin-right: 50px;
+        float: right;
+    }
 }
-.img-circle {
-    border-radius: 50%;
-    max-width: 60%;
-    box-shadow: 0 0 5px 1px #AAA;
-    transition: all 0.2s ease-in-out;
-}
-.img-circle:hover {
-    filter: saturate(4);
-    box-shadow: 0 0 10px 1px #AAA;
-}
-h1 {
-    margin: 5px 0 10px 0;
-}
-#nav {
-    margin-bottom: 15px;
-}
-#nav li {
-    margin-bottom: 4px;
-    display: block;
-}
-#social i {
-    display: inline;
-    padding-left: 15px;
-}
-.main-content {
-    width: 65%;
-    margin-right: 50px;
-    float: right;
+
+
+
+@media only screen and (max-width: 850px) {
+    main {
+        width: 80%;
+        margin: 100px auto 0 auto;
+    }
+    body {
+        font-size: 90%;
+    }
+    .main-content {
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+    
+    /* TAKEN MOSTLY FROM MAIN.CSS */
+    header {
+        width: 100%;
+        float: none;
+        text-align: inherit;
+        position: inherit;
+        margin-bottom: 30px;
+    }
+    .img-circle {
+        border-radius: 50%;
+        max-width: 20%;
+        box-shadow: 0 0 5px 1px #AAA;
+        transition: all 0.2s ease-in-out;
+    }
+    .img-circle:hover {
+        filter: saturate(4);
+        box-shadow: 0 0 10px 1px #AAA;
+    }
+    h1 {
+        display: inline;
+        margin-bottom: 5px;
+        transition: all 0.1s ease-in-out;
+    }
+    #nav, #social, #nav li {
+        display: inline-block;
+    }
+    #nav {
+        padding-left: 2px;
+        margin-bottom: 0;
+    }
+    #nav li {
+        padding-right: 15px;
+    }
+    #social {
+        float: right;
+        margin-right: 5px;
+    }
+    #social i {
+        padding-left: 15px;
+    }
+    #social i:hover {
+        transform: scale(1.2);
+    }
+    .linebreak {
+        margin-top: 10px;
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        padding: 0;
+    }
 }
