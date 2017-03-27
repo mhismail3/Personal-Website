@@ -36,7 +36,7 @@ header {
     
     max-width: 30%;
     display: block;
-    margin: 0 auto;
+/*    margin: 0 auto;*/
 }
 .img-circle:hover {
     filter: saturate(4);
@@ -46,13 +46,13 @@ h1 {
     transition: all 0.1s ease-in-out;
     
     display: block;
-    text-align: center;
+/*    text-align: center;*/
     margin-top: 5px;
 }
 #nav {
-    padding-left: 2px;
+/*    padding-left: 2px;*/
     display: block;
-    text-align: center;
+/*    text-align: center;*/
 }
 #nav li {
     display: inline;
@@ -64,8 +64,8 @@ h1 {
 #social {
     float: none;
     display: block;
-    text-align: center;
-    margin: 10px 0 0 0;
+/*    text-align: center;*/
+    margin: 10px 0 0 2px;
 }
 #social a {
     padding-left: 25px;
@@ -193,6 +193,7 @@ h1 {
     }
     #social {
         text-align: right;
+        margin: 0 5px 0 0;
     }
     #social a {
         display: inline;
