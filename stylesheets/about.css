@@ -95,12 +95,29 @@ footer {
 
 
 
+/***************************
+    RESPONSIVE
+***************************/
 
 @media only screen and (max-width: 850px) {
     h1 {
         font-size: 3em;
     }
+    .main-content {
+/*        font-size: 90%;*/
+    }
     h2 {
         padding-top: 30px; 
+    }
+}
+
+
+
+@media only screen and (max-width: 500px) and (orientation: portrait) {
+    body {
+        font-size: 80%;
+    }
+    #nav, #social {
+        font-size: 1.5em;
     }
 }
