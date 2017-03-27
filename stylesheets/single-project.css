@@ -1,41 +1,4 @@
 /***************************
-    FONTS
-***************************/
-
-header {
-    font-family: 'Cuprum', sans-serif;
-}
-section {
-    font-family: 'Roboto Slab', serif;
-    font-size: 20px;
-}
-h1 {
-    font-size: 30px;
-}
-#nav li {
-    font-size: 24px;
-}
-h2 {
-    font-family: monaco, monospace;
-    font-size: 36px;
-}
-.code-block {
-    font-family: monaco, monospace;
-    font-size: 14px;
-}
-footer {
-    font-size: 16px;
-}
-
-.disclaimer {
-    font-size: 18px;
-    font-style: italic;
-    color: #999;
-}
-
-
-
-/***************************
     LINKS
 ***************************/
 
@@ -63,18 +26,64 @@ h1 a:hover, #social i:hover {
 
 
 /***************************
+    FONTS
+***************************/
+
+body {
+    font-size: 80%;
+}
+header {
+    font-family: 'Cuprum', sans-serif;
+}
+section {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.25em;
+}
+h1 {
+    font-size: 3em;
+}
+#nav li {
+    font-size: 2.5em;
+}
+#social {
+    font-size: 2em;
+}
+h2 {
+    font-family: monaco, monospace;
+    font-size: 2em;
+}
+.long-h2 {
+    font-size: 1.5em;
+}
+.code-block {
+    font-family: monaco, monospace;
+    font-size: .625em;
+}
+footer {
+    font-size: 1em;
+}
+
+.disclaimer {
+    font-size: 1.125em;
+    font-style: italic;
+    color: #999;
+}
+
+
+
+/***************************
     SIZING & ALIGNMENT
 ***************************/
 
 #title-background {
-    height: 100px;
+    height: 70px;
     background-color: #EEE;
     
     display: flex;
     align-items: center;
     justify-content: center;
     
-    margin-bottom: 40px;
+    margin: -40px 0 40px 0;
 }
 u {
     text-decoration: underline;
@@ -106,3 +115,82 @@ footer p{
 .disclaimer {
     margin-bottom: 40px;
 }
+
+
+
+/***************************
+    RESPONSIVE
+***************************/
+
+    /***************************
+        MOBILE LANDSCAPE
+    ***************************/
+@media only screen and (max-width: 500px) and (orientation: landscape) {
+    h1 {
+        font-size: 3em;
+    }
+    #nav li {
+        font-size: 2em;
+    }
+}
+
+
+
+    /***************************
+        TABLET
+    ***************************/
+@media only screen and (max-width: 850px) and (min-width: 501px) {
+    body {
+        font-size: 90%;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    #nav li {
+        font-size: 2em;
+    }
+    #social {
+        font-size: 1.9em;
+    }
+    .code-block {
+        font-size: .75em;
+    }
+    
+    #title-background {
+        height: 100px;
+        
+        margin: 0 0 40px 0;
+    }
+
+}
+
+
+
+    /***************************
+       LAPTOP
+    ***************************/
+@media only screen and (min-width: 851px) {
+    
+    body {
+        font-size: 100%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #nav li {
+        font-size: 1.7em;
+    }
+    #social {
+        font-size: 1.5em;
+    }
+    .code-block {
+        font-size: .75em;
+    }
+    
+    #title-background {
+        height: 100px;
+        
+        margin: 0 0 40px 0;
+    }
+}
+

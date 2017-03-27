@@ -1,33 +1,4 @@
 /***************************
-    FONTS
-***************************/
-
-header {
-    font-family: 'Cuprum', sans-serif;
-}
-.main-content {
-    font-family: 'Roboto Slab', serif;
-    font-size: 20px;
-}
-h1 {
-    font-size: 30px;
-}
-#nav li {
-    font-size: 24px;
-}
-h2 {
-    font-size: 36px;
-}
-.longtext {
-    font-size: 24px;
-}
-footer {
-    font-size: 16px;
-}
-
-
-
-/***************************
     LINKS
 ***************************/
 
@@ -62,52 +33,6 @@ h2 a:hover{
 
 
 /***************************
-    SIZING & ALIGNMENT
-***************************/
-
-h2 {
-    margin-bottom: 10px;
-}
-.category {
-    margin-bottom: 60px;
-}
-.image {
-    height: 250px;
-    border-radius: 3px;
-    box-shadow: 2px 2px 5px 1px #AAA;
-    
-    margin-bottom: 10px;
-    
-    transition: all 0.2s ease-in-out;
-}
-.image:hover {
-    transform: translate(-5px, -5px);
-    box-shadow: 5px 5px 15px 1px #AAA;
-}
-#sendesign {
-    height: 400px;
-    box-shadow: 2px 2px 5px 1px #555;
-}
-#sendesign:hover {
-    box-shadow: 5px 5px 15px 1px #555;
-}
-.linebreak {
-    margin: 0 auto 60px auto;
-    display: block;
-    width: 40%;
-    border-top: 4px solid #ccc;
-}
-.longtext {
-    padding-top: 5px;
-}
-footer p {
-    margin: 100px 0 0 0;
-    padding-bottom: 5px;
-}
-
-
-
-/***************************
     IMAGES
 ***************************/
 
@@ -127,3 +52,158 @@ footer p {
     background: #ffffff url("../images/senior-design-profile.png");
     background-size: cover;
 }
+
+
+
+/***************************
+    FONTS
+***************************/
+
+body {
+    font-size: 80%;
+}
+header {
+    font-family: 'Cuprum', sans-serif;
+}
+.main-content {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.25em;
+}
+h1 {
+    font-size: 3em;
+}
+#nav li {
+    font-size: 2.5em;
+}
+#social {
+    font-size: 2em;
+}
+h2 {
+    font-size: 2.25em;
+}
+.longtext {
+    font-size: 1.5em;
+}
+footer {
+    font-size: 1em;
+}
+
+
+
+
+/***************************
+    SIZING & ALIGNMENT
+***************************/
+
+h2 {
+    margin-bottom: 10px;
+}
+.category {
+    margin-bottom: 60px;
+}
+.image {
+    height: 120px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 1px #AAA;
+    
+    margin-bottom: 10px;
+    
+    transition: all 0.2s ease-in-out;
+}
+.image:hover {
+    box-shadow: 5px 5px 15px 1px #AAA;
+}
+#sendesign {
+    box-shadow: 2px 2px 5px 1px #555;
+}
+#sendesign:hover {
+    box-shadow: 5px 5px 15px 1px #555;
+}
+.content-linebreak {
+    margin: 0 auto 60px auto;
+    display: block;
+    width: 40%;
+    border-top: 4px solid #ccc;
+}
+.longtext {
+    padding-top: 5px;
+}
+footer p {
+    margin: 100px 0 0 0;
+    padding-bottom: 5px;
+}
+
+
+
+/***************************
+    RESPONSIVE
+***************************/
+
+    /***************************
+        MOBILE LANDSCAPE
+    ***************************/
+@media only screen and (max-width: 500px) and (orientation: landscape) {
+    h1 {
+        font-size: 3em;
+    }
+    #nav li {
+        font-size: 2em;
+    }
+}
+
+
+
+    /***************************
+        TABLET
+    ***************************/
+@media only screen and (max-width: 850px) and (min-width: 501px) {
+    body {
+        font-size: 90%;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    #nav li {
+        font-size: 2em;
+    }
+    #social {
+        font-size: 1.9em;
+    }
+    
+    .image {
+        height: 250px;
+    }
+
+}
+
+
+
+    /***************************
+       LAPTOP
+    ***************************/
+@media only screen and (min-width: 851px) {
+    
+    body {
+        font-size: 100%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #nav li {
+        font-size: 1.7em;
+    }
+    #social {
+        font-size: 1.5em;
+    }
+    
+    .image {
+        height: 250px;
+    }
+    .image:hover {
+        transform: translate(-5px, -5px);
+    }
+    #sendesign {
+        height: 400px;
+    }
+}
+

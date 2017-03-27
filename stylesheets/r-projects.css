@@ -3,11 +3,11 @@
 ***************************/
 
 h2 {
-    font-size: 40px;
+    font-size: 2.5em;
 }
 .feat-code-block p {
     font-family: monaco, monospace;
-    font-size: 26px;
+    font-size: 1.625em;
 }
 
 
@@ -32,30 +32,65 @@ h2 {
 ***************************/
 
 h2 {
-    margin: 0 0 30px 70px;
+    margin: -30px 0 30px 0;
 }
 .feat-code-block {
-    height: 150px;
+    height: 120px;
     background-color: #EEE;
     box-shadow: 2px 2px 5px 1px #AAA;
     
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     
     display: flex;
     align-items: center;
-    justify-content: left;
     
     transition: all 0.2s ease-in-out;
 }
 .feat-code-block:hover {
-    transform: translate(-5px, -5px);
     box-shadow: 5px 5px 15px 1px #AAA;
 }
 .feat-code-block p {
-    margin-left: 70px;
+    margin-left: 20px;
 }
 
 /* need a better fix for sticking footer to bottom */
 footer {
     margin-top: 305px;
+}
+
+
+
+
+    /***************************
+        TABLET
+    ***************************/
+@media only screen and (max-width: 850px) and (min-width: 501px) {
+    .feat-code-block {
+        height: 150px;
+        margin-bottom: 50px;
+    }
+    .feat-code-block p {
+        margin-left: 70px;
+    }
+}
+
+
+
+    /***************************
+       LAPTOP
+    ***************************/
+@media only screen and (min-width: 851px) {
+    .feat-code-block:hover {
+        transform: translate(-5px, -5px);
+    }
+    h2 {
+        margin: 0 0 30px 70px;
+    }
+    .feat-code-block {
+        height: 150px;
+        margin-bottom: 50px;
+    }
+    .feat-code-block p {
+        margin-left: 70px;
+    }
 }
