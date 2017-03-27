@@ -112,18 +112,18 @@ footer p {
 ***************************/
 
 #pyth {
-    background: #ffffff url("images/python-back.png");
+    background: #ffffff url("../images/python-back.png");
     background-size: cover;
 }
 #r {
-    background: #ffffff url("images/r-back.png");
+    background: #ffffff url("../images/r-back.png");
     background-size: cover;
 }
 #htmlcss {
-    background: #ffffff url("images/html-back.png");
+    background: #ffffff url("../images/html-back.png");
     background-size: cover;
 }
 #sendesign {
-    background: #ffffff url("images/senior-design-profile.png");
+    background: #ffffff url("../images/senior-design-profile.png");
     background-size: cover;
 }

@@ -25,6 +25,7 @@ main {
 
 body {
     font-family: 'Roboto Slab', serif;
+/*    font-size: 100%;*/
 }
 header {
     font-family: 'Cuprum', sans-serif;
@@ -34,9 +35,11 @@ h1 {
 }
 #nav, #social {
     font-size: 24px;
+/*    font-size: 1.5em;*/
 }
 section p {
     font-size: 22px;
+/*    font-size: 2vw;*/
 }
 h2 {
     font-size: 38px;
@@ -171,15 +174,15 @@ footer {
 ***************************/
 
 #pyth {
-    background: #fff url("images/python-back2.png");
+    background: #fff url("../images/python-back2.png");
     background-size: cover;
 }
 #rprog {
-    background: #fff url("images/r-back2.png");
+    background: #fff url("../images/r-back2.png");
     background-size: cover;
 }
 #htmlcss {
-    background: #fff url("images/html-back2.png");
+    background: #fff url("../images/html-back2.png");
     background-size: cover;
 }
 

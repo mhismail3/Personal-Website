@@ -55,7 +55,7 @@ h2 {
     margin-left: 70px;
 }
 
-/* there has to be a better fix */
+/* need a better fix for sticking footer to bottom */
 footer {
     margin-top: 305px;
 }
