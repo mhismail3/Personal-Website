@@ -193,7 +193,7 @@ h1 {
     }
     #social {
         text-align: right;
-        margin: 0 5px 0 0; /*CHANGE THIS*/
+        margin: 0;
     }
     #social a {
         display: inline;
