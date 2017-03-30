@@ -45,7 +45,7 @@ footer p {
     /***************************
        LAPTOP
     ***************************/
-@media only screen and (min-width: 851px) {
+@media only screen and (min-width: 1025px) {
     h2 {
         margin: 0 0 30px 0;
     }

@@ -121,7 +121,7 @@ h1 {
     /***************************
         TABLET
     ***************************/
-@media only screen and (max-width: 850px) and (min-width: 501px) {
+@media only screen and (max-width: 1024px) and (min-width: 501px) {
     main {
         width: 80%;
         margin: 40px auto 0 auto;
@@ -153,7 +153,7 @@ h1 {
     /***************************
        LAPTOP
     ***************************/
-@media only screen and (min-width: 851px) {
+@media only screen and (min-width: 1025px) {
     
     main {
         width: 95%;

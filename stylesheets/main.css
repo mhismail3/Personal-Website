@@ -81,6 +81,7 @@ section a:hover, footer a:hover {
     text-decoration: none;
 }
 
+
 /* Gets rid of sticky hover on touchscreen */
 @media (hover:none), (hover:on-demand) {
     #nav a:hover {
@@ -88,6 +89,8 @@ section a:hover, footer a:hover {
         text-decoration: none;
     }
 }
+
+
 
 /***************************
     IMAGES
@@ -244,7 +247,7 @@ footer {
     /***************************
         TABLET
     ***************************/
-@media only screen and (max-width: 850px) and (min-width: 501px) {
+@media only screen and (max-width: 1024px) and (min-width: 501px) {
     main {
         width: 80%;
         margin-top: 40px;
@@ -285,7 +288,7 @@ footer {
     /***************************
         LAPTOP
     ***************************/
-@media only screen and (min-width: 851px) {
+@media only screen and (min-width: 1025px) {
     
     main {
         width: 60%;

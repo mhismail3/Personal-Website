@@ -129,7 +129,7 @@ footer {
     /***************************
         TABLET
     ***************************/
-@media only screen and (max-width: 850px) and (min-width: 501px) {
+@media only screen and (max-width: 1024px) and (min-width: 501px) {
     body {
         font-size: 90%;
     }
@@ -150,7 +150,7 @@ footer {
     /***************************
        LAPTOP
     ***************************/
-@media only screen and (min-width: 851px) {
+@media only screen and (min-width: 1025px) {
     
     body {
         font-size: 100%;

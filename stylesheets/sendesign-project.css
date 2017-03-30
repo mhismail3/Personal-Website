@@ -89,7 +89,7 @@ footer p {
     /***************************
         TABLET
     ***************************/
-@media only screen and (max-width: 850px) and (min-width: 501px) {
+@media only screen and (max-width: 1024px) and (min-width: 501px) {
     .imgcaption {
         width: 80%;
     }
@@ -103,7 +103,7 @@ footer p {
     /***************************
        LAPTOP
     ***************************/
-@media only screen and (min-width: 851px) {
+@media only screen and (min-width: 1025px) {
     h2 {
         margin: 0 0 30px 0;
     }
