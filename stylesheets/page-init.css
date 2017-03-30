@@ -36,7 +36,6 @@ header {
     
     max-width: 30%;
     display: block;
-/*    margin: 0 auto;*/
 }
 .img-circle:hover {
     filter: saturate(4);
@@ -46,13 +45,10 @@ h1 {
     transition: all 0.1s ease-in-out;
     
     display: block;
-/*    text-align: center;*/
     margin-top: 5px;
 }
 #nav {
-/*    padding-left: 2px;*/
     display: block;
-/*    text-align: center;*/
 }
 #nav li {
     display: inline;
@@ -64,7 +60,6 @@ h1 {
 #social {
     float: none;
     display: block;
-/*    text-align: center;*/
     margin: 10px 0 0 2px;
 }
 #social a {
@@ -81,6 +76,7 @@ h1 {
     border-top: 1px solid #ccc;
     padding: 0;
 }
+
 
 
 /***************************
@@ -209,6 +205,3 @@ h1 {
         float: right;
     }
 }
-
-
-

@@ -62,7 +62,6 @@ h2 {
 footer {
     font-size: .75em;
 }
-
 .disclaimer {
     font-size: .9em;
     font-style: italic;
@@ -111,7 +110,6 @@ footer p{
     padding-bottom: 5px;
     margin: 100px 0 0 0 ;
 }
-
 .disclaimer {
     margin-bottom: 40px;
 }
@@ -155,10 +153,8 @@ footer p{
     .code-block {
         font-size: .75em;
     }
-    
     #title-background {
         height: 100px;
-        
         margin: 0 0 40px 0;
     }
 
@@ -170,7 +166,6 @@ footer p{
        LAPTOP
     ***************************/
 @media only screen and (min-width: 1025px) {
-    
     body {
         font-size: 100%;
     }
@@ -186,11 +181,8 @@ footer p{
     .code-block {
         font-size: .75em;
     }
-    
     #title-background {
         height: 100px;
-        
         margin: 0 0 40px 0;
     }
 }
-
