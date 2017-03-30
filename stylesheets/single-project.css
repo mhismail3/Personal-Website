@@ -49,14 +49,14 @@ h1 {
     font-size: 2em;
 }
 h2 {
-    font-family: monaco, monospace;
+    font-family: 'Source Code Pro', monospace; 
     font-size: 2em;
 }
 .long-h2 {
     font-size: 1.5em;
 }
 .code-block {
-    font-family: monaco, monospace;
+    font-family: 'Source Code Pro', monospace; 
     font-size: .75em;
 }
 footer {
@@ -64,7 +64,7 @@ footer {
 }
 
 .disclaimer {
-    font-size: 1.125em;
+    font-size: .9em;
     font-style: italic;
     color: #999;
 }
