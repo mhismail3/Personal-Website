@@ -47,6 +47,7 @@
                 
                 <p>This program takes data on the mortality rates for certain conditions, for a list of hospitals from every state, and is able to rank the hospitals based on the lowest mortality rate for a certain outcome.</p>
                 
+                <div class="code-block-background">
                 <div class="code-block">
                     <p>rankhospital &lt;- function(state, outcome, num = "best") {</p>
                     <br>
@@ -65,6 +66,7 @@
                     <br>
                     <p>&emsp;&emsp;&emsp;&emsp;data[num, "Hospital.Name"]</p>
                     <p>}</p>
+                </div>
                 </div>
                 
                 <p>The function rankhospital() takes as input a state, one of three specified outcomes, and a rank. It reads into a data frame the hospital data from a specified file, and subsets the state, hospital name, and outcome columns. After eliminating NA values, the function orders the remaining data first by state, and then by increasing mortality rate for the specified outcome. Finally, the function returns the hospital name for the specified rank.</p>

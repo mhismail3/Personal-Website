@@ -97,13 +97,17 @@ u {
 section p {
     margin-bottom: 20px;
 }
-.code-block {
+.code-block-background {
     background: #DDD;
     border-radius: 3px;
     padding: 40px;
     margin: 40px 0;
 }
-.code-block p{
+.code-block {
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+.code-block p {
     margin: 0;
 }
 footer p{

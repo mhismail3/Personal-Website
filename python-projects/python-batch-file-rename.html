@@ -58,6 +58,7 @@
                 
                 <p>First, we import the necessary packages and define a couple of functions.</p>
                 
+                <div class="code-block-background">
                 <div class="code-block">
                     <p>import os, argparse</p>
                     <br>
@@ -77,6 +78,7 @@
                     <p>&emsp;&emsp;&emsp;parser.add_argument('newExt', type=str, nargs=1, help='new extension')</p>
                     <p>&emsp;&emsp;&emsp;return parser</p>
                 </div>
+                </div>
                 
                 <p>The rename() function takes the same three input arguments and loops through all of the files present in the directory. For any file that ends with the old extension, the function removes the extension and appends the new one.</p>
                 
@@ -84,6 +86,7 @@
                 
                 <p>With these two functions defined, we can write the rest of the script.</p>
                 
+                <div class="code-block-background">
                 <div class="code-block">
                     <p>def main():</p>
                     <br>
@@ -98,6 +101,7 @@
                     <br>
                     <p>if __name__ == '__main__':</p>
                     <p>&emsp;&emsp;&emsp;main()</p>
+                </div>
                 </div>
                 
                 <p>Here, the program gets the ArgumentParser object and, assuming that the user passed the necessary three arguments at the command line, parses the arguments. The vars() function returns a dictionary of ordered pairs, with the inputted arguments as the first items of the pairs. The program then uses these values as inputs for the rename() function.</p>

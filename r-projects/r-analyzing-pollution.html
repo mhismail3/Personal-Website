@@ -47,12 +47,14 @@
                 
                 <p>This program makes use of a set of 332 CSV files, each of which corresponds to a specific pollution monitor. Each monitor has an corresponding ID, and collects data for a consecutive number of days on sulfate and nitrate concentrations in the air. The CSV files can be found <a href="">here</a>.</p>
                 
+                <div class="code-block-background">
                 <div class="code-block">
                     <p>pollutantmean &lt;- function(directory, pollutant, id = 1:332) {</p>
                     <br>
                     <p>&emsp;&emsp;&emsp;&emsp;mean(do.call(rbind, lapply(dir(directory, full.names = TRUE)[id], </p>
                     <p>&emsp;&emsp;&emsp;&emsp;read.csv))[, pollutant], na.rm = TRUE)</p>
                     <p>}</p>
+                </div>
                 </div>
                 
                 <p>The first function, pollutantmean(), takes as inputs the directory containing the CSV files, a pollutant (either sulfate or nitrate), and a range of IDs corresponding to the CSV files we want to look at.</p>
@@ -61,6 +63,7 @@
                 
                 <p>The end value we get is the mean of the data for the specified pollutant column across all specified ID monitors.</p>
                 
+                <div class="code-block-background">
                 <div class="code-block">
                     <p>complete &lt;- function(directory, id = 1:332) {</p>
                     <br>
@@ -69,11 +72,13 @@
                     <p>&emsp;&emsp;&emsp;&emsp;function(x) complete.cases(x$nitrate, x$sulfate)), sum)))</p>
                     <p>}</p>
                 </div>
+                </div>
                 
                 <p>The second function, complete(), returns a data frame where the first column is an ID number and the second column is the number of complete cases in the corresponding file. It takes as inputs the directory with the CSV files and a range of IDs corresponding to the CSV files.</p>
                 
                 <p>First, we get use the range of IDs to get the specified files and then use read.csv() with lapply() to read them into data frames. We then use lapply() again to get only the complete cases in each of the data frames, and then lapply() one more time to get the sum of these complete cases.</p>
                 
+                <div class="code-block-background">
                 <div class="code-block">
                     <p>corr &lt;- function(directory, threshold = 0) {</p>
                     <br>
@@ -90,6 +95,7 @@
                     <p>&emsp;&emsp;&emsp;&emsp;}</p>
                     <p>&emsp;&emsp;&emsp;&emsp;correlations</p>
                     <p>}</p>
+                </div>
                 </div>
                 
                 <p>The third function, corr(), takes as input the directory containing the CSV files and a threshold value. The function returns a numeric vector with correlation values between nitrate and sulfate for only the monitors whose number of complete cases meets the threshold value.</p>

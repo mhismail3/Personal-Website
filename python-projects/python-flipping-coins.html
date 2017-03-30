@@ -119,6 +119,7 @@
 
                 <p>One possible way to go about solving the problem is to write a simple brute-force program that can experimentally show us what the outcome might be.</p>
 
+                <div class="code-block-background">
                 <div class="code-block">
                     <p>import random</p>
                     <br>
@@ -142,6 +143,7 @@
                     <p>if __name__ == '__main__':</p>
                     <p>&emsp;&emsp;&emsp;flipCoins()</p>
                 </div>
+                </div>
 
                 <p>This short program basically flips eight coins and stores the results of each flip in a list. If both the current coin flip and previous coin flip were 1's (heads), then the case is considered False. The program then checks to see if there were exactly 4 heads out of 8 flips, and that the case is True. Only then will it consider the case to be a "good" outcome (one of the 5 possibilities above).</p>
 
@@ -151,6 +153,7 @@
 
                 <p>If you run the program, you will likely get different values than mine, but I suspect you will see them fall within the range above most of the time as well. After running the program a few times, I got the following output:</p>
 
+                <div class="code-block-background">
                 <div class="code-block">
                     <p>541 25600</p>
                     <p>526 25600</p>
@@ -161,6 +164,7 @@
                     <p>456 25600</p>
                     <p>475 25600</p>
                     <p>518 25600</p>
+                </div>
                 </div>
 
                 <p>The results fall quite neatly in line with what we expected.</p>

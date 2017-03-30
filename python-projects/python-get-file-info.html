@@ -53,6 +53,7 @@
                 
                 <p>Next, we get a file name from the user and pass it to the os.stat() function, storing the information in a dictionary. This dictionary can then be used to print out some of the information that we're looking for.</p>
                 
+                <div class="code-block-background">
                 <div class="code-block">
                     <p>fileName = input("> ")</p>
                     <p>try:</p>
@@ -77,9 +78,11 @@
                     <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"last modified = {f_lm}, last accessed = {f_la}, " +</p>
                     <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"creation time = {f_ct}\n").format(**fileInfo))</p>
                 </div>
+                </div>
                 
                 <p>Finally, we can print out let the user know whether the file name he or she passed in was a dictionary or not, and present some more information about what other parameters can be accessed using the os.stat() function.</p>
                 
+                <div class="code-block-background">
                 <div class="code-block">
                     <p>if stat.S_ISDIR(fileStats.st_mode):</p>
                     <p>&emsp;&emsp;&emsp;print("This is a directory")</p>
@@ -95,6 +98,7 @@
                     <p>&emsp;&emsp;&emsp;seconds since epoch), st_mtime (last modification time),</p>
                     <p>&emsp;&emsp;&emsp;st_ctime (time of creation on Windows)"""</p>
                     <p>&emsp;&emsp;&emsp;)</p>
+                </div>
                 </div>
                 
                 <p>This program is used to illustrate some of the functions that the built-in modules of Python can provide when dealing with files and file types. </p>
