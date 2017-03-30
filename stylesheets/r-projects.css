@@ -25,7 +25,15 @@ h2 {
     text-decoration: none;
 }
 
+/* Gets rid of sticky hover on touchscreen */
+@media (hover:none), (hover:on-demand) {
+    .blocklink:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+}
 
+/* What about @media (hover:hover) */
 
 /***************************
     SIZING & ALIGNMENT
