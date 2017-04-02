@@ -123,12 +123,11 @@ header {
     margin-bottom: 60px;
 }
 .img-circle {
+    max-width: 30%;
+    
     border-radius: 50%;
     box-shadow: 0 0 5px 1px #AAA;
     transition: all 0.2s ease-in-out;
-    
-    max-width: 30%;
-    display: block;
 }
 .img-circle:hover {
     filter: saturate(4);
@@ -137,20 +136,12 @@ header {
 h1 {
     text-shadow: -3px 3px 10px #AAA;
     transition: all 0.1s ease-in-out;
-    
-    display: block;
-    margin: 0;
-}
-#nav {
-    display: block;
 }
 #nav li {
     display: inline;
     padding-right: 15px;
 }
 #social {
-/*    float: none;*/
-    display: block;
     margin: 10px 0 0 2px;
 }
 #social a {
@@ -212,17 +203,12 @@ footer {
     }
     .img-circle {
         width: 15%;
-        display: inherit;
-        margin: 0;
     }
     h1 {
         font-size: 3em;
-        display: inline;
-        margin-bottom: 5px;
-        text-align: inherit;
     }
     #nav, #social {
-        font-size: 2em;
+        font-size: 1.9em;
         display: inline-block;
     }
     #social {
@@ -249,17 +235,12 @@ footer {
     }
     .img-circle {
         max-width: 20%;
-        display: inherit;
-        margin: 0;
     }
     h1 {
-        display: inline;
-        margin-bottom: 5px;
-        text-align: inherit;
         text-shadow: none;
     }
     #nav, #social {
-        font-size: 1.9em;
+        font-size: 1.8em;
         display: inline-block;
         padding-left: 2px;
     }
@@ -291,13 +272,8 @@ footer {
     }
     .img-circle {
         max-width: 20%;
-        display: inherit;
-        margin: 0;
     }
     h1 {
-        display: inline;
-        margin-bottom: 5px;
-        text-align: inherit;
         text-shadow: none;
     }
     #nav, #social {

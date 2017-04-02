@@ -30,12 +30,11 @@ header {
     margin-bottom: 60px;
 }
 .img-circle {
+    max-width: 30%;
+    
     border-radius: 50%;
     box-shadow: 0 0 5px 1px #AAA;
     transition: all 0.2s ease-in-out;
-    
-    max-width: 30%;
-    display: block;
 }
 .img-circle:hover {
     filter: saturate(4);
@@ -43,12 +42,6 @@ header {
 }
 h1 {
     transition: all 0.1s ease-in-out;
-    
-    display: block;
-    margin-top: 5px;
-}
-#nav {
-    display: block;
 }
 #nav li {
     display: inline;
@@ -58,8 +51,6 @@ h1 {
     padding: 0;
 }
 #social {
-    float: none;
-    display: block;
     margin: 10px 0 0 2px;
 }
 #social a {
@@ -70,7 +61,6 @@ h1 {
 }
 .linebreak {
     margin-top: 10px;
-    display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
@@ -91,13 +81,6 @@ h1 {
     }
     .img-circle {
         width: 15%;
-        display: inline;
-        margin: 0;
-    }
-    h1 {
-        display: inline;
-        margin-bottom: 5px;
-        text-align: inherit;
     }
     #nav, #social {
         display: inline-block;
@@ -123,13 +106,6 @@ h1 {
     }
     .img-circle {
         max-width: 20%;
-        display: inherit;
-        margin: 0;
-    }
-    h1 {
-        display: inline;
-        margin-bottom: 5px;
-        text-align: inherit;
     }
     #nav {
         display: inline-block;
@@ -166,7 +142,6 @@ h1 {
         transition: all 0.2s ease-in-out;
         
         max-width: 60%;
-        display: inline;
         margin: 0 0 10px 0;
     }
     .img-circle:hover {
@@ -174,11 +149,10 @@ h1 {
         box-shadow: 0 0 10px 1px #AAA;
     }
     h1 {
-        display: inline;
-        margin: 5px 0 10px 0;
+        margin: 0 0 10px 0;
     }
     #nav {
-        margin: 10px 0 15px 0;
+        margin: 0 0 15px 0;
         text-align: right;
     }
     #nav li {
@@ -188,14 +162,11 @@ h1 {
     }
     #social {
         text-align: right;
-        margin: 0;
     }
     #social a {
-        display: inline;
         padding-left: 15px;
     }
     .linebreak {
-        margin: 0;
         border: 0;
     }
     .main-content {
