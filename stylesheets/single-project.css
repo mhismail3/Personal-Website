@@ -107,7 +107,7 @@ section p {
 .code-block-background {
     background: #DDD;
     border-radius: 3px;
-    padding: 40px;
+    padding: 20px;
     margin: 40px 0;
 }
 .code-block {
@@ -161,6 +161,9 @@ footer p{
     #social {
         font-size: 1.9em;
     }
+    .code-block-background {
+        padding: 30px;
+    }
     .code-block {
         font-size: .75em;
     }
@@ -188,6 +191,9 @@ footer p{
     }
     #social {
         font-size: 1.5em;
+    }
+    .code-block-background {
+        padding: 40px;
     }
     .code-block {
         font-size: .75em;
