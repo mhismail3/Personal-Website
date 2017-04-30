@@ -55,7 +55,9 @@ footer {
 ***************************/
 
 a, #social i {
-    transition: all 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out,
+        text-decoration 0.1s ease-in-out,
+        transform 0.5s ease-in-out;
 }
 h1 a, #social i, #nav a {
     color: inherit;
@@ -109,7 +111,12 @@ section a:hover, footer a:hover {
     background-size: cover;
 }
 
-
+@keyframes colors {
+    0%, 100% { filter: none; }  
+    25% { filter: saturate(4); }
+    50% { filter: sepia(); }
+    75% { filter: invert(); }
+}
 
 /***************************
     SIZING & ALIGNMENT (MOBILE FIRST)
@@ -124,7 +131,6 @@ header {
 }
 .img-circle {
     max-width: 30%;
-    
     border-radius: 50%;
     box-shadow: 0 0 5px 1px #AAA;
     transition: all 0.2s ease-in-out;
@@ -147,7 +153,7 @@ h1 {
 #social a {
     padding-left: 25px;
 }
-#social a:nth-child(1) {
+#social a:first-child {
     padding-left: 0;
 }
 .linebreak {
@@ -170,14 +176,14 @@ h2 {
 .category {
     height: 120px;
     margin: 0 auto 30px auto;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     border-radius: 5px;
     box-shadow: 0 0 5px 1px #AAA;
-    
+
     transition: all 0.2s ease-in-out;
 }
 .category:hover {
@@ -273,6 +279,11 @@ footer {
     .img-circle {
         max-width: 20%;
     }
+/*
+    .img-circle:hover {
+        animation: colors 3s ease infinite;
+    }
+*/
     h1 {
         text-shadow: none;
     }
@@ -289,7 +300,7 @@ footer {
         padding-left: 15px;
     }
     #social i:hover {
-        transform: scale(1.2);
+        transform: scale(1.2) rotate(360deg);
     }
     .category:hover {
         transform: scale(1.1);
