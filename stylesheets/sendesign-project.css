@@ -33,7 +33,9 @@ h2 {
     width: 100%;
     box-shadow: 2px 2px 5px 1px #AAA;
     
-    transition: all 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out,
+                transform 0.2s ease-in-out,
+                margin-bottom 0.2s ease-in-out;
 }
 .content-image:hover {
     margin-bottom: 5px;
@@ -70,7 +72,8 @@ footer p {
 }
 #sdfinger, #sdsensor {
     box-shadow: 2px 2px 5px 1px #AAA;
-    transition: all 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out,
+                transform 0.2s ease-in-out;
 }
 #sdfinger:hover, #sdsensor:hover {
     box-shadow: 10px 10px 15px 2px #999;

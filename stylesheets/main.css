@@ -57,7 +57,7 @@ footer {
 a, #social i {
     transition: color 0.1s ease-in-out,
                 text-decoration 0.1s ease-in-out,
-                transform 0.4s ease-in-out;
+                transform 0.2s ease-in-out;
 }
 h1 a, #social i, #nav a {
     color: inherit;
@@ -316,7 +316,7 @@ footer {
         padding-left: 15px;
     }
     #social i:hover {
-        transform: scale(1.2) rotate(360deg);
+        transform: scale(1.2);
     }
     .category:hover {
         transform: scale(1.1);
