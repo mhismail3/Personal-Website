@@ -3,7 +3,9 @@
 ***************************/
 
 a, #social i {
-    transition: all 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out,
+                text-decoration 0.1s ease-in-out,
+                transform 0.4s ease-in-out;
 }
 h1 a, #nav a, #social i {
     color: inherit;
@@ -17,7 +19,7 @@ h1 a:hover, #social i:hover {
 }
 section a, footer a {
     color: #d1175e;
-    transition: all 0.1s ease-in-out;
+    transition: text-decoration 0.1s ease-in-out;
 }
 section a:hover, footer a:hover {
     text-decoration: underline;
@@ -114,7 +116,8 @@ h2 {
     
     margin-bottom: 10px;
     
-    transition: all 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out,
+                box-shadow 0.2s ease-in-out;
 }
 .image:hover {
     box-shadow: 5px 5px 15px 1px #AAA;

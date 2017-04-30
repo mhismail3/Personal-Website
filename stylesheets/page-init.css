@@ -34,14 +34,15 @@ header {
     
     border-radius: 50%;
     box-shadow: 0 0 5px 1px #AAA;
-    transition: all 0.2s ease-in-out;
+    transition: filter 0.2s ease-in-out,
+                box-shadow 0.2s ease-in-out;
 }
 .img-circle:hover {
     filter: saturate(4);
     box-shadow: 0 0 10px 1px #AAA;
 }
 h1 {
-    transition: all 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out;
 }
 #nav li {
     display: inline;
@@ -136,17 +137,9 @@ h1 {
         text-align: right;
         position: fixed;
     }
-    .img-circle {
-        border-radius: 50%;
-        box-shadow: 0 0 5px 1px #AAA;
-        transition: all 0.2s ease-in-out;
-        
+    .img-circle {        
         max-width: 60%;
         margin: 0 0 10px 0;
-    }
-    .img-circle:hover {
-        filter: saturate(4);
-        box-shadow: 0 0 10px 1px #AAA;
     }
     h1 {
         margin: 0 0 10px 0;
