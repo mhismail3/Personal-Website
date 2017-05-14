@@ -57,7 +57,7 @@ footer {
 a, #social i {
     transition: color 0.1s ease-in-out,
                 text-decoration 0.1s ease-in-out,
-                transform 0.2s ease-in-out;
+                transform 0.3s cubic-bezier(.22, .64, .29, 2.3);
 }
 h1 a, #social i, #nav a {
     color: inherit;
@@ -198,8 +198,8 @@ h2 {
     border-radius: 5px;
     box-shadow: 0 0 5px 1px #AAA;
 
-    transition: box-shadow 0.2s ease-in-out,
-                transform 0.2s ease-in-out;
+    transition: box-shadow 0.3s cubic-bezier(.22, .64, .29, 2),
+                transform 0.3s cubic-bezier(.22, .64, .29, 2);
 }
 .category:hover {
     box-shadow: 0 0 30px 1px #AAA;
